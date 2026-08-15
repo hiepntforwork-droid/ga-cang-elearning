@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buổi 5 — Quản lý và Khai thác Ga, Cảng</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="home" href="index.html">&#8962; Mục lục</a>
+  <span class="course">Quản lý và Khai thác Ga, Cảng &middot; Mã 418009</span>
+</header>
+<main class="content">
+<h1 id="tai-lieu-huong-dan-tu-hoc-e-learning-2">TÀI LIỆU HƯỚNG DẪN TỰ HỌC (E-LEARNING 2)</h1>
+<h2 id="buoi-5-khai-thac-cap-cang">BUỔI 5: KHAI THÁC CẤP CẢNG</h2>
+<ul>
+<li><strong>Môn học:</strong> Quản lý và Khai thác Ga, Cảng (Mã môn: 418009)</li>
+<li><strong>Giảng viên biên soạn:</strong> ThS. Nguyễn Tuấn Hiệp</li>
+<li><strong>Đối tượng:</strong> Sinh viên ngành Quản trị Logistics và Chuỗi cung ứng - Trường Đại học Giao thông Vận tải TP.HCM (UTH)</li>
+</ul>
+<hr />
+<h3 id="gioi-thieu-bai-hoc">GIỚI THIỆU BÀI HỌC</h3>
+<p>Chào các em sinh viên,
+Nội dung bài học tự học (E-learning) Buổi số 5 sẽ tập trung nghiên cứu về <strong>Khai thác cấp cảng (Port-level Operations)</strong>. Đây là phần kiến thức kỹ thuật rất quan trọng giúp các em nắm được cách đo lường năng lực và hiệu quả khai thác của cả một bến cảng thông qua hệ thống các chỉ tiêu về <strong>sản lượng xếp dỡ</strong>, <strong>năng suất bốc xếp</strong> và <strong>hệ số sử dụng cầu cảng (Berth Occupancy Factor)</strong>. </p>
+<p>Bài học này yêu cầu các em phải nắm chắc các công thức và giải được các bài tập tính toán thực tế. Hãy chuẩn bị kỹ để thực hiện bộ 20 câu hỏi trắc nghiệm kiểm tra trên hệ thống Moodle sau khi đọc xong tài liệu.</p>
+<hr />
+<h3 id="phan-1-cac-chi-tieu-san-luong-cua-cang-bien">PHẦN 1: CÁC CHỈ TIÊU SẢN LƯỢNG CỦA CẢNG BIỂN</h3>
+<p>Để đo lường lượng hàng hóa dịch chuyển qua cảng, người quản trị sử dụng 3 chỉ số sản lượng chính: <strong>Sản lượng thông qua (Throughput)</strong>, <strong>Sản lượng xếp dỡ (Handling Volume)</strong>, và <strong>Sản lượng thao tác</strong>.</p>
+<h4 id="1-san-luong-thong-qua-cang-port-throughput-math21">1. Sản lượng thông qua cảng (Port Throughput - \(Q_{tq}\))</h4>
+<p>Là lượng hàng hóa thực tế đi vào hoặc đi ra khỏi ranh giới cảng trong một đơn vị thời gian (thường tính bằng Tấn hoặc TEU/năm). Sản lượng thông qua là chỉ số đo lường quy mô và tốc độ phát triển thương mại của cảng.</p>
+<h4 id="2-san-luong-xep-do-handling-volume-math22">2. Sản lượng xếp dỡ (Handling Volume - \(Q_{xd}\))</h4>
+<p>Là tổng lượng hàng hóa thực tế được bốc xếp dịch chuyển qua các phương án tác nghiệp khác nhau của cảng. 
+Có 5 phương án xếp dỡ cơ bản tại cảng biển:
+1. <strong>Tàu \(\leftrightarrow\) Ô tô, Toa xe (Phương án chuyển thẳng):</strong> Hàng hóa được bốc xếp trực tiếp giữa tàu và phương tiện vận tải hậu phương, không cần qua kho bãi cảng.
+2. <strong>Tàu \(\leftrightarrow\) Sà lan (Phương án sang mạn):</strong> Hàng hóa được bốc xếp trực tiếp giữa tàu lớn và sà lan đậu bên cạnh.
+3. <strong>Tàu \(\leftrightarrow\) Kho bãi cảng (Phương án lưu kho):</strong> Hàng dỡ từ tàu đưa vào lưu trữ tạm thời tại kho hoặc bãi cảng, hoặc ngược lại.
+4. <strong>Kho bãi cảng \(\leftrightarrow\) Ô tô, Toa xe (Phương án giao nhận):</strong> Hàng từ kho bãi cảng được xếp lên xe tải/toa xe để rời cảng, hoặc xe tải đưa hàng vào kho cảng.
+5. <strong>Kho bãi \(\leftrightarrow\) Kho bãi khác (Phương án dịch chuyển nội bộ):</strong> Di chuyển container hoặc hàng hóa giữa các khu vực bãi đỗ trong cảng.</p>
+<h5 id="he-so-xep-do-math28">Hệ số xếp dỡ (\(K_{xd}\)):</h5>
+<p>Hệ số xếp dỡ biểu thị mối quan hệ giữa sản lượng xếp dỡ thực tế và sản lượng hàng hóa thông qua cảng:
+\[K_{xd} = \frac{Q_{xd}}{Q_{tq}}\]</p>
+<ul>
+<li><strong>Ý nghĩa:</strong></li>
+<li>Nếu \(K_{xd} = 1\): Toàn bộ hàng hóa thông qua cảng đều được xếp dỡ theo phương án chuyển thẳng hoặc sang mạn (không lưu kho bãi).</li>
+<li>Trên thực tế, sản lượng xếp dỡ thường lớn hơn sản lượng thông qua (\(K_{xd} \ge 1\)), do phần lớn hàng hóa phải đi qua kho bãi cảng (lúc này 1 tấn hàng thông qua sẽ phát sinh ít nhất 2 lần xếp dỡ: từ tàu vào bãi và từ bãi lên xe).</li>
+</ul>
+<hr />
+<h4 id="3-san-luong-thao-tac-handling-operations-math31">3. Sản lượng thao tác (Handling Operations - \(Q_{tt}\))</h4>
+<p>Là tổng khối lượng hàng hóa nhân với số lần nâng hạ thực tế (số bước công việc) để hoàn thành một phương án xếp dỡ.
+* <strong>Ý nghĩa:</strong> Đánh giá hao phí lao động chi tiết của công nhân cảng, làm cơ sở định mức lao động và năng suất.
+* <strong>Hệ số cơ giới hóa (\(H_{cg}\)):</strong> Đo lường tỷ lệ bốc xếp bằng máy móc thiết bị so với thủ công:
+\[H_{cg} = \frac{Q_{tt, cg}}{Q_{tt}} \times 100\%\]
+<em>(Trong đó: \(Q_{tt, cg}\) là sản lượng thao tác thực hiện bằng thiết bị cơ giới).</em></p>
+<hr />
+<h4 id="huong-dan-giai-cac-vi-du-ung-dung-phan-1">HƯỚNG DẪN GIẢI CÁC VÍ DỤ ỨNG DỤNG (PHẦN 1)</h4>
+<h5 id="vi-du-1-tinh-san-luong-xep-do-va-he-so-xep-do">Ví dụ 1: Tính sản lượng xếp dỡ và hệ số xếp dỡ</h5>
+<p>Một tàu chở container cập cảng dỡ xuống tổng cộng \(50.000\) tấn container. Trong đó:
+- \(20.000\) tấn container được xếp trực tiếp lên xe đầu kéo container của chủ hàng để chở đi ngay (phương án chuyển thẳng).
+- \(30.000\) tấn container còn lại được đưa vào bãi CY của cảng để lưu trữ, sau đó toàn bộ số container này được giao cho các xe tải đến nhận và chở đi.
+<strong>Yêu cầu:</strong> Xác định sản lượng thông qua (\(Q_{tq}\)), sản lượng xếp dỡ (\(Q_{xd}\)) và hệ số xếp dỡ (\(K_{xd}\)) của cảng đối với lô hàng trên?</p>
+<h6 id="bai-giai-chi-tiet">Bài giải chi tiết:</h6>
+<ol>
+<li><strong>Sản lượng thông qua (\(Q_{tq}\)):</strong> Là lượng hàng thực tế đi vào cảng:
+   \[Q_{tq} = 50.000 \text{ tấn}\]</li>
+<li><strong>Sản lượng xếp dỡ (\(Q_{xd}\)):</strong> Tính bằng tổng lượng xếp dỡ qua các phương án:
+   - Phương án Tàu \(\rightarrow\) Xe (Chuyển thẳng): \(20.000\) tấn.
+   - Phương án Tàu \(\rightarrow\) Bãi CY (Lưu kho): \(30.000\) tấn.
+   - Phương án Bãi CY \(\rightarrow\) Xe tải (Giao nhận): \(30.000\) tấn.
+   - Tổng sản lượng xếp dỡ:
+     \[Q_{xd} = 20.000 + 30.000 + 30.000 = 80.000 \text{ tấn}\]</li>
+<li><strong>Hệ số xếp dỡ (\(K_{xd}\)):</strong>
+   \[K_{xd} = \frac{Q_{xd}}{Q_{tq}} = \frac{80.000}{50.000} = 1,60\]
+   <em>Đáp số: \(Q_{tq} = 50.000\) tấn; \(Q_{xd} = 80.000\) tấn; \(K_{xd} = 1,60\).</em></li>
+</ol>
+<hr />
+<h5 id="vi-du-2-tinh-he-so-co-gioi-hoa-xep-do">Ví dụ 2: Tính hệ số cơ giới hóa xếp dỡ</h5>
+<p>Trong một ca làm việc, cảng thực hiện dỡ \(60\) tấn hàng bao từ tàu lên xe ô tô. Để thực hiện phương án này, hàng hóa trải qua 3 bước thao tác nâng hạ:
+- Bước 1: Cẩu bờ nâng hàng từ hầm tàu đặt lên cầu tàu (sản lượng cơ giới): \(60\) tấn.
+- Bước 2: Công nhân dùng xe nâng tay di chuyển kiện hàng vào vị trí đệm (sản lượng thủ công/bán cơ giới): \(60\) tấn.
+- Bước 3: Công nhân bốc tay xếp bao hàng lên thùng xe tải (sản lượng thủ công): \(60\) tấn.
+<strong>Yêu cầu:</strong> Tính sản lượng xếp dỡ, sản lượng thao tác và hệ số cơ giới hóa (\(H_{cg}\)) của ca làm việc này?</p>
+<h6 id="bai-giai-chi-tiet_1">Bài giải chi tiết:</h6>
+<ol>
+<li><strong>Sản lượng xếp dỡ (\(Q_{xd}\)):</strong> Khối lượng hàng bốc xếp thực tế là \(60\) tấn.</li>
+<li><strong>Sản lượng thao tác (\(Q_{tt}\)):</strong> Do hàng trải qua 3 bước thao tác, mỗi bước di chuyển \(60\) tấn hàng:
+   \[Q_{tt} = 60 \text{ tấn} \times 3 \text{ thao tác} = 180 \text{ tấn thao tác}\]
+   - Trong đó: Sản lượng cơ giới (\(Q_{tt, cg}\)) = \(60\) tấn (Bước 1 dùng cẩu bờ).
+   - Sản lượng thủ công = \(60 + 60 = 120\) tấn (Bước 2 nâng tay, Bước 3 bốc tay).</li>
+<li><strong>Hệ số cơ giới hóa (\(H_{cg}\)):</strong>
+   \[H_{cg} = \frac{Q_{tt, cg}}{Q_{tt}} \times 100\% = \frac{60}{180} \times 100\% \approx 33,33\%\]
+   <em>Đáp số: \(Q_{xd} = 60\) tấn; \(Q_{tt} = 180\) tấn thao tác; \(H_{cg} = 33,33\%\).</em></li>
+</ol>
+<hr />
+<h3 id="phan-2-cac-chi-tieu-nang-suat-cang-berth-performance">PHẦN 2: CÁC CHỈ TIÊU NĂNG SUẤT CẢNG (BERTH PERFORMANCE)</h3>
+<p>Để đánh giá tốc độ làm hàng và khả năng giải phóng tàu của cảng, các chỉ tiêu năng suất sau được sử dụng:</p>
+<ol>
+<li><strong>Năng suất cảng (Port Performance Index - \(PPI\)):</strong>
+   \[PPI = \frac{\text{Tổng sản lượng hàng thông qua}}{\text{Tổng thời gian tàu ở cảng (chờ cầu + đậu cầu)}} \text{ (tấn/giờ)}\]</li>
+<li><strong>Năng suất cầu bến (Berth Performance Index - \(BPI\)):</strong>
+   \[BPI = \frac{\text{Tổng sản lượng hàng thông qua}}{\text{Tổng thời gian tàu đậu tại cầu cảng}} \text{ (tấn/giờ)}\]</li>
+<li><strong>Năng suất hàng hóa (Cargo Performance Index - \(CPI\)):</strong>
+   \[CPI = \frac{\text{Tổng sản lượng hàng thông qua}}{\text{Tổng thời gian tàu thực tế làm hàng (xếp dỡ)}} \text{ (tấn/giờ)}\]</li>
+<li><strong>Năng suất thông qua của 1 mét cầu cảng trong năm:</strong>
+   \[PPI_{1m} = \frac{\text{Tổng sản lượng thông qua cảng trong năm (tấn)}}{\text{Tổng chiều dài các cầu tàu của cảng (m)}} \text{ (tấn/m/năm)}\]</li>
+</ol>
+<hr />
+<h3 id="phan-3-he-so-lam-viec-cua-cau-tau-berth-occupancy-factor-math71">PHẦN 3: HỆ SỐ LÀM VIỆC CỦA CẦU TÀU (Berth Occupancy Factor - \(\eta\))</h3>
+<p>Hệ số làm việc của cầu tàu (hoặc hệ số sử dụng cầu tàu) đánh giá mức độ bận rộn của cầu cảng cả về mặt thời gian và không gian bến.</p>
+<h4 id="truong-hop-1-cau-cang-chi-tiep-nhan-duy-nhat-1-tau-tai-mot-thoi-iem">Trường hợp 1: Cầu cảng chỉ tiếp nhận duy nhất 1 tàu tại một thời điểm</h4>
+<p><em>(Ví dụ: Cầu cảng chuyên dụng cho tàu dầu, phao neo, cầu tàu khách).</em>
+Công thức tính hệ số sử dụng:
+\[\eta = \frac{\sum_{i=1}^{n} t_i}{T}\]</p>
+<ul>
+<li><strong>Trong đó:</strong></li>
+<li>\(t_i\): Thời gian đậu của tàu thứ \(i\) tại cầu tàu (giờ).</li>
+<li>\(T\): Tổng thời gian khả dụng của cầu tàu trong kỳ phân tích (nếu tính theo năm \(T = 365 \times 24 = 8760\) giờ; tính theo tuần \(T = 7 \times 24 = 168\) giờ).</li>
+<li>\(n\): Tổng số tàu cập cầu trong kỳ phân tích.</li>
+</ul>
+<hr />
+<h4 id="truong-hop-2-cau-cang-dai-tiep-nhan-ong-thoi-nhieu-tau-cung-luc">Trường hợp 2: Cầu cảng dài tiếp nhận đồng thời nhiều tàu cùng lúc</h4>
+<p><em>(Ví dụ: Cầu cảng container kéo dài bến liên tục).</em>
+Công thức tính hệ số sử dụng:
+\[\eta = \frac{\sum_{i=1}^{n} (l_i \times t_i)}{L_{ct} \times T}\]</p>
+<ul>
+<li><strong>Trong đó:</strong></li>
+<li>\(l_i\): Chiều dài của tàu thứ \(i\) (m).</li>
+<li>\(t_i\): Thời gian đậu tại cầu của tàu thứ \(i\) (giờ).</li>
+<li>\(L_{ct}\): Tổng chiều dài của cầu tàu cảng (m).</li>
+<li>\(T\): Tổng thời gian khả dụng của bến cảng (giờ).</li>
+</ul>
+<hr />
+<h4 id="huong-dan-giai-cac-vi-du-ung-dung-phan-3">HƯỚNG DẪN GIẢI CÁC VÍ DỤ ỨNG DỤNG (PHẦN 3)</h4>
+<h5 id="vi-du-3-he-so-su-dung-cau-cang-tiep-nhan-on-tau">Ví dụ 3: Hệ số sử dụng cầu cảng tiếp nhận đơn tàu</h5>
+<p>Một bến cảng chuyên dụng chỉ có duy nhất 1 vị trí cập cầu tàu. Trong một tuần (7 ngày), cảng tiếp nhận 3 tàu dầu cập làm hàng với thông số như sau:
+- Tàu 1: Cập cầu lúc 10h00 ngày thứ Hai, rời cầu lúc 10h00 ngày thứ Ba.
+- Tàu 2: Cập cầu lúc 14h30 ngày thứ Tư, rời cầu lúc 14h30 ngày thứ Sáu.
+- Tàu 3: Cập cầu lúc 06h00 ngày thứ Bảy, rời cầu lúc 18h00 ngày thứ Bảy.
+<strong>Yêu cầu:</strong> Tính hệ số làm việc (\(\eta\)) của cầu cảng dầu này trong tuần đó?</p>
+<h6 id="bai-giai-chi-tiet_2">Bài giải chi tiết:</h6>
+<ol>
+<li><strong>Tính thời gian đậu cầu (\(t_i\)) của từng tàu:</strong>
+   - Tàu 1: Từ 10h00 Thứ Hai đến 10h00 Thứ Ba \(\rightarrow t_1 = 24 \text{ giờ}\).
+   - Tàu 2: Từ 14h30 Thứ Tư đến 14h30 Thứ Sáu \(\rightarrow t_2 = 48 \text{ giờ}\).
+   - Tàu 3: Từ 06h00 Thứ Bảy đến 18h00 Thứ Bảy \(\rightarrow t_3 = 12 \text{ giờ}\).
+   - Tổng thời gian đậu cầu của 3 tàu:
+     \[\sum t_i = 24 + 48 + 12 = 84 \text{ giờ}\]</li>
+<li><strong>Tổng thời gian khả dụng trong tuần (\(T\)):</strong>
+   \[T = 7 \text{ ngày} \times 24 \text{ giờ/ngày} = 168 \text{ giờ}\]</li>
+<li><strong>Hệ số làm việc của cầu cảng (\(\eta\)):</strong>
+   \[\eta = \frac{\sum t_i}{T} = \frac{84}{168} = 0,50 \text{ (hoặc } 50\%)\]
+   <em>Đáp số: Hệ số sử dụng cầu cảng đạt 50%.</em></li>
+</ol>
+<hr />
+<h5 id="vi-du-4-he-so-su-dung-cau-cang-tiep-nhan-nhieu-tau-ong-thoi">Ví dụ 4: Hệ số sử dụng cầu cảng tiếp nhận nhiều tàu đồng thời</h5>
+<p>Một bến cảng container nước sâu có tổng chiều dài cầu bến liên tục là \(L_{ct} = 300\ m\). Trong một tuần (168 giờ), cảng tiếp nhận 3 tàu container cập cầu xếp dỡ hàng hóa:
+- Tàu A: Chiều dài \(l_A = 120\ m\), thời gian đậu làm hàng \(t_A = 30\) giờ.
+- Tàu B: Chiều dài \(l_B = 150\ m\), thời gian đậu làm hàng \(t_B = 40\) giờ.
+- Tàu C: Chiều dài \(l_C = 100\ m\), thời gian đậu làm hàng \(t_C = 20\) giờ.
+<strong>Yêu cầu:</strong> Tính hệ số sử dụng cầu cảng container (\(\eta\)) trong tuần phân tích?</p>
+<h6 id="bai-giai-chi-tiet_3">Bài giải chi tiết:</h6>
+<ol>
+<li><strong>Tính tổng tích số (Chiều dài \(\times\) Thời gian đậu) của các tàu:</strong>
+   \[\sum (l_i \times t_i) = (l_A \times t_A) + (l_B \times t_B) + (l_C \times t_C)\]
+   \[\sum (l_i \times t_i) = (120 \times 30) + (150 \times 40) + (100 \times 20)\]
+   \[\sum (l_i \times t_i) = 3600 + 6000 + 2000 = 11.600 \text{ m}\cdot\text{giờ}\]</li>
+<li><strong>Tích số khả dụng của cả bến cảng:</strong>
+   \[\text{Mẫu số} = L_{ct} \times T = 300\ m \times 168 \text{ giờ} = 50.400 \text{ m}\cdot\text{giờ}\]</li>
+<li><strong>Hệ số sử dụng cầu cảng (\(\eta\)):</strong>
+   \[\eta = \frac{11.600}{50.400} \approx 0,2302 \text{ (hoặc } 23,02\%)\]
+   <em>Đáp số: Hệ số sử dụng cầu bến container đạt 23,02%.</em></li>
+</ol>
+<hr />
+<h3 id="huong-dan-tu-hoc-va-luu-y-cho-sinh-vien">HƯỚNG DẪN TỰ HỌC VÀ LƯU Ý CHO SINH VIÊN</h3>
+<ol>
+<li><strong>Cơ giới hóa và Hiệu suất cảng:</strong> Khi tính hệ số cơ giới hóa \(H_{cg}\), các em cần phân biệt rõ bước nào bốc xếp bằng thiết bị nâng hạ lớn (như cẩu STS nâng container từ hầm tàu đặt lên xe) với các bước phụ trợ bằng sức người hoặc thiết bị cầm tay nhỏ.</li>
+<li><strong>Cách tính thời gian tàu đậu:</strong> Đối với bài tập tính hệ số làm việc cầu tàu, cần lưu ý quy đổi thời gian chính xác giữa các thứ trong tuần (1 ngày có 24 giờ). Phải nhớ phân biệt rõ đề bài cho cầu cảng chỉ đỗ 1 tàu hay đỗ được nhiều tàu đồng thời để chọn đúng công thức áp dụng.</li>
+</ol>
+<p>Chúc các em học tập hiệu quả và hoàn thành tốt nội dung tự học Buổi 5!</p>
+<hr />
+<h3 id="tai-lieu-oc-them-thuc-te-references">TÀI LIỆU ĐỌC THÊM THỰC TẾ (REFERENCES)</h3>
+<p>Các tài liệu thực tiễn dưới đây nằm trong thư mục  để phục vụ đối chiếu thực tiễn:
+* <strong>Quyết định 442/QĐ-TTg năm 2024 về Điều chỉnh Quy hoạch Cảng biển Việt Nam</strong>
+* <strong>Báo cáo dự án Cảng trung chuyển quốc tế Cần Giờ</strong></p></main>
+<footer class="pagefoot">
+  <p>Quản lý và Khai thác Ga, Cảng (Mã 418009) &mdash; Giảng viên biên soạn: ThS. Nguyễn Tuấn Hiệp</p>
+  <p>Trường Đại học Giao thông Vận tải TP.HCM (UTH) &middot; Tài liệu tự học E-learning</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+    mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "loose" });
+  });
+</script>
+</body>
+</html>
