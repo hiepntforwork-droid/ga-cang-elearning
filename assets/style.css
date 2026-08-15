@@ -2,6 +2,15 @@
   --teal:#15848B; --teal-dark:#0f636a; --red:#FF0000;
   --ink:#1a2124; --muted:#5b6b70; --line:#e2e8ea;
   --bg:#f5f7f8; --card:#ffffff; --accent-soft:#e8f2f2;
+  --th:#15848B; --th-ink:#ffffff; --code:#eef1f2; --stripe:#f8fbfb;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --teal:#3fb3ba; --teal-dark:#6fd3d9; --red:#ff6b6b;
+    --ink:#e6edee; --muted:#9fb0b3; --line:#2b3a3d;
+    --bg:#0f1517; --card:#161f22; --accent-soft:#12312f;
+    --th:#0f636a; --th-ink:#eafcff; --code:#1d282b; --stripe:#131c1f;
+  }
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -16,7 +25,7 @@ body{
 .topbar{
   position:sticky; top:0; z-index:20;
   display:flex; align-items:center; justify-content:space-between; gap:1rem;
-  background:var(--teal); color:#fff;
+  background:#15848B; color:#fff;
   padding:.6rem 1.2rem; box-shadow:0 2px 8px rgba(0,0,0,.12);
   font-size:.95rem;
 }
@@ -39,20 +48,20 @@ body{
 .content a{color:var(--teal-dark)}
 .content ul,.content ol{padding-left:1.5em; margin:.6em 0}
 .content li{margin:.3em 0}
-.content strong{color:#12343a}
+.content strong{color:var(--ink)}
 .content hr{border:none; border-top:1px solid var(--line); margin:2em 0}
 
 /* blockquote / callout */
 .content blockquote{
   margin:1.1em 0; padding:.7em 1.1em;
   background:var(--accent-soft); border-left:5px solid var(--teal);
-  border-radius:0 6px 6px 0; color:#254; font-size:.97em;
+  border-radius:0 6px 6px 0; color:var(--ink); font-size:.97em;
 }
 .content blockquote p{margin:.3em 0}
 
 /* code */
 .content code{
-  background:#eef1f2; padding:.12em .4em; border-radius:4px;
+  background:var(--code); padding:.12em .4em; border-radius:4px;
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.88em;
 }
 .content pre{overflow:auto}
@@ -68,8 +77,8 @@ body{
 .content th,.content td{
   border:1px solid var(--line); padding:.55em .7em; text-align:left; vertical-align:top;
 }
-.content thead th{background:var(--teal); color:#fff; font-weight:700}
-.content tbody tr:nth-child(even){background:#f8fbfb}
+.content thead th{background:var(--th); color:var(--th-ink); font-weight:700}
+.content tbody tr:nth-child(even){background:var(--stripe)}
 
 /* mermaid */
 .mermaid{
@@ -91,7 +100,7 @@ body{
 /* ---------- home / index ---------- */
 .home-wrap{max-width:960px}
 .hero{
-  background:linear-gradient(135deg,var(--teal),var(--teal-dark));
+  background:linear-gradient(135deg,#15848B,#0f636a);
   color:#fff; border-radius:14px; padding:2.2rem 1.8rem; margin-bottom:2rem;
   box-shadow:0 6px 20px rgba(21,132,139,.25);
 }
@@ -112,7 +121,7 @@ body{
   align-self:flex-start; background:var(--accent-soft); color:var(--teal-dark);
   font-weight:700; font-size:.8rem; padding:.25em .7em; border-radius:999px;
 }
-.card .card-title{font-weight:700; font-size:1.08rem; line-height:1.35; color:#12343a; flex:1}
+.card .card-title{font-weight:700; font-size:1.08rem; line-height:1.35; color:var(--ink); flex:1}
 .card .go{color:var(--teal); font-weight:700; font-size:.9rem}
 
 @media (max-width:600px){
