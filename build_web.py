@@ -1,18 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Rebuild the e-learning HTML site from src/*.md.
+"""Rebuild the e-learning HTML site.
+
+Nguồn thật (source of truth) = thư mục "Tài liệu tự học E-learning" ở ngay
+cạnh repo. Mỗi lần chạy, script tự đồng bộ các .md gốc vào src/ rồi dựng lại
+HTML — nên thầy chỉ cần sửa bản .md gốc, không phải lo bản trong repo bị lệch.
+Nếu không tìm thấy thư mục gốc (ví dụ clone repo sang máy khác) thì dùng luôn
+bản .md đang có sẵn trong src/.
 
 Usage:
     python3 -m pip install markdown pymdown-extensions
     python3 build_web.py
 """
-import os, re, html
+import os, re, html, shutil
 import markdown
 from pymdownx.superfences import fence_div_format
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(HERE, "src")
 OUT_DIR = HERE
+# Thư mục .md gốc (nằm cạnh repo, trong thư mục môn học)
+ORIG_DIR = os.path.abspath(os.path.join(HERE, "..", "Tài liệu tự học E-learning"))
 
 LESSONS = [
     (3,  "Buoi 3 - Tai lieu tu hoc E-learning.md",  "buoi-03.html"),
@@ -185,8 +193,24 @@ def titles(md_text):
     return (h1.group(1).strip() if h1 else ""), (h2.group(1).strip() if h2 else "")
 
 
+def sync_sources():
+    """Copy the canonical .md from ORIG_DIR into src/ (nếu thư mục gốc tồn tại)."""
+    os.makedirs(SRC_DIR, exist_ok=True)
+    if not os.path.isdir(ORIG_DIR):
+        print(f"(!) Không thấy thư mục gốc: {ORIG_DIR}\n    -> dùng bản .md sẵn có trong src/")
+        return
+    for _, srcname, _ in LESSONS:
+        orig = os.path.join(ORIG_DIR, srcname)
+        if os.path.isfile(orig):
+            shutil.copy2(orig, os.path.join(SRC_DIR, srcname))
+            print(f"đồng bộ  src/{srcname}")
+        else:
+            print(f"(!) thiếu file gốc: {srcname} -> giữ bản cũ trong src/ nếu có")
+
+
 def main():
     os.makedirs(os.path.join(OUT_DIR, "assets"), exist_ok=True)
+    sync_sources()
     index_cards = []
     for num, srcname, outname in LESSONS:
         with open(os.path.join(SRC_DIR, srcname), encoding="utf-8") as f:
