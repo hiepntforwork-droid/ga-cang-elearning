@@ -13,15 +13,27 @@
   <span class="course">Quản lý và Khai thác Ga, Cảng &middot; Mã 418009</span>
 </header>
 <main class="content">
-<h1 id="tai-lieu-huong-dan-tu-hoc-e-learning-1">TÀI LIỆU HƯỚNG DẪN TỰ HỌC (E-LEARNING 1)</h1>
-<h2 id="buoi-3-cau-truc-van-hanh-chung-cho-moi-loai-hinh-ga-cang">BUỔI 3: CẤU TRÚC VẬN HÀNH CHUNG CHO MỌI LOẠI HÌNH GA, CẢNG</h2>
+<h1 id="tài-liệu-hướng-dẫn-tự-học-e-learning-1">TÀI LIỆU HƯỚNG DẪN TỰ HỌC (E-LEARNING 1)</h1>
+<h2 id="buổi-3-cấu-trúc-vận-hành-chung-cho-mọi-loại-hình-ga-cảng">BUỔI 3: CẤU TRÚC VẬN HÀNH CHUNG CHO MỌI LOẠI HÌNH GA, CẢNG</h2>
 <ul>
 <li><strong>Môn học:</strong> Quản lý và Khai thác Ga, Cảng (Mã môn: 418009)</li>
 <li><strong>Giảng viên biên soạn:</strong> ThS. Nguyễn Tuấn Hiệp</li>
 <li><strong>Đối tượng:</strong> Sinh viên ngành Quản trị Logistics và Chuỗi cung ứng - Trường Đại học Giao thông Vận tải TP.HCM (UTH)</li>
 </ul>
 <hr />
-<h3 id="gioi-thieu-bai-hoc">GIỚI THIỆU BÀI HỌC</h3>
+<nav class="toc">
+  <p class="toc-title">Nội dung bài học</p>
+  <ol>
+    <li><a href="#giới-thiệu-bài-học">GIỚI THIỆU BÀI HỌC</a></li>
+    <li><a href="#phần-1-cấu-trúc-vận-hành-và-cơ-sở-vật-chất-chung">PHẦN 1: CẤU TRÚC VẬN HÀNH VÀ CƠ SỞ VẬT CHẤT CHUNG</a></li>
+    <li><a href="#phần-2-tính-toán-công-suất-khu-vực-đóntrả-phương-tiện">PHẦN 2: TÍNH TOÁN CÔNG SUẤT KHU VỰC ĐÓN/TRẢ PHƯƠNG TIỆN</a></li>
+    <li><a href="#phần-3-tính-toán-công-suất-tối-đa-khu-vực-đóntrả-kèm-theo-diện-tích">PHẦN 3: TÍNH TOÁN CÔNG SUẤT TỐI ĐA KHU VỰC ĐÓN/TRẢ KÈM THEO DIỆN TÍCH</a></li>
+    <li><a href="#phần-4-tính-toán-công-suất-khu-vực-chờ-tài-holding-area">PHẦN 4: TÍNH TOÁN CÔNG SUẤT KHU VỰC CHỜ TÀI (HOLDING AREA)</a></li>
+    <li><a href="#hướng-dẫn-tự-học-và-lưu-ý-cho-sinh-viên">HƯỚNG DẪN TỰ HỌC VÀ LƯU Ý CHO SINH VIÊN</a></li>
+    <li><a href="#tài-liệu-đọc-thêm-thực-tế-references">TÀI LIỆU ĐỌC THÊM THỰC TẾ (REFERENCES)</a></li>
+  </ol>
+</nav>
+<h3 id="giới-thiệu-bài-học">GIỚI THIỆU BÀI HỌC</h3>
 <p>Chào các em sinh viên,
 Buổi số 3 là bài học tự học (E-learning) đầu tiên trong chương trình học. Trong bài học này, chúng ta sẽ cùng nghiên cứu về <strong>Cấu trúc vận hành chung áp dụng cho mọi loại hình ga, cảng</strong> (bao gồm bến xe đường bộ, ga đường sắt, cảng hàng không và cảng biển) và các công thức kỹ thuật nền tảng để tính toán công suất khai thác của các phân khu chức năng tại đầu mối vận tải này.</p>
 <p>Các em cần đọc kỹ tài liệu này, kết hợp với slide bài giảng để làm bài tập tự luyện và chuẩn bị cho bộ 20 câu hỏi trắc nghiệm kiểm tra trên hệ thống Moodle.</p>
@@ -29,7 +41,7 @@ Buổi số 3 là bài học tự học (E-learning) đầu tiên trong chương
 <p><strong>Lưu ý:</strong> Nên mở tài liệu này trên <strong>máy tính (laptop/PC)</strong> thay vì điện thoại để bảng biểu, công thức và sơ đồ hiển thị đầy đủ và đẹp nhất.</p>
 </blockquote>
 <hr />
-<h3 id="phan-1-cau-truc-van-hanh-va-co-so-vat-chat-chung">PHẦN 1: CẤU TRÚC VẬN HÀNH VÀ CƠ SỞ VẬT CHẤT CHUNG</h3>
+<h3 id="phần-1-cấu-trúc-vận-hành-và-cơ-sở-vật-chất-chung">PHẦN 1: CẤU TRÚC VẬN HÀNH VÀ CƠ SỞ VẬT CHẤT CHUNG</h3>
 <p>Mặc dù các phương thức vận tải (đường bộ, đường sắt, hàng không, đường biển) có đặc thù kỹ thuật rất khác nhau, nhưng về mặt <strong>quản lý khai thác ga cảng</strong>, tất cả đều chia sẻ một cấu trúc vận hành chung gồm 4 khu vực chức năng cốt lõi:</p>
 <div class="mermaid">graph TD
     A[Vùng tiếp cận - Approach Area] --&gt; B[Vùng đón/trả phương tiện - Handling/Berthing Area]
@@ -41,7 +53,7 @@ Buổi số 3 là bài học tự học (E-learning) đầu tiên trong chương
 <li><strong>Vùng lưu trữ &amp; Chờ tài (Storage/Holding Area):</strong> Nơi đỗ chờ của phương tiện trước/sau khi làm hàng (chờ tài) hoặc nơi lưu trữ tạm thời hàng hóa (kho, bãi) và hành khách (phòng chờ).</li>
 <li><strong>Vùng kết nối hậu phương (Hinterland Interface/Landside):</strong> Khu vực cổng kiểm soát (Gate), bãi trung chuyển, kết nối ga cảng với mạng lưới giao thông đường bộ đô thị hoặc khu vực hậu phương để phân phối hàng hóa/hành khách.</li>
 </ol>
-<h4 id="bang-oi-chieu-co-so-vat-chat-tuong-ung-cua-4-loai-hinh-ga-cang">Bảng đối chiếu cơ sở vật chất tương ứng của 4 loại hình ga cảng:</h4>
+<h4 id="bảng-đối-chiếu-cơ-sở-vật-chất-tương-ứng-của-4-loại-hình-ga-cảng">Bảng đối chiếu cơ sở vật chất tương ứng của 4 loại hình ga cảng:</h4>
 <table>
 <thead>
 <tr>
@@ -84,8 +96,8 @@ Buổi số 3 là bài học tự học (E-learning) đầu tiên trong chương
 </tbody>
 </table>
 <hr />
-<h3 id="phan-2-tinh-toan-cong-suat-khu-vuc-ontra-phuong-tien">PHẦN 2: TÍNH TOÁN CÔNG SUẤT KHU VỰC ĐÓN/TRẢ PHƯƠNG TIỆN</h3>
-<h4 id="1-cong-suat-khai-thac-cua-ben-xe-trong-mot-gio">1. Công suất khai thác của bến xe trong một giờ</h4>
+<h3 id="phần-2-tính-toán-công-suất-khu-vực-đóntrả-phương-tiện">PHẦN 2: TÍNH TOÁN CÔNG SUẤT KHU VỰC ĐÓN/TRẢ PHƯƠNG TIỆN</h3>
+<h4 id="1-công-suất-khai-thác-của-bến-xe-trong-một-giờ">1. Công suất khai thác của bến xe trong một giờ</h4>
 <p>Công suất khai thác thực tế của khu vực đón/trả phương tiện bị ảnh hưởng lớn bởi khả năng thông hành của mạng lưới đường giao thông xung quanh bến xe (đường tiếp cận).</p>
 <p><strong>Công thức:</strong>
 \[B_{\text{khai thác/giờ}} = \varphi \times B_{\text{tính toán}}\]</p>
@@ -95,7 +107,7 @@ Buổi số 3 là bài học tự học (E-learning) đầu tiên trong chương
   \[B_{\text{tính toán}} = N \times \frac{60}{t_{\text{headway}}}\]
   <em>(với \(N\) là số vị trí đón/trả và \(t_{\text{headway}}\) là thời gian dãn cách trung bình giữa các chuyến tính bằng phút).</em>
 * \(\varphi\): Hệ số ảnh hưởng đến công suất bến xe (đánh giá mức độ phục vụ của đường giao thông xung quanh bến xe). Hệ số này phụ thuộc vào tỷ số \(V/C\) (Lưu lượng giao thông thực tế của đường tiếp cận / Khả năng thông hành thiết kế của đường tiếp cận).</p>
-<h4 id="bang-tra-he-so-anh-huong-math26-theo-ty-so-vc">Bảng tra hệ số ảnh hưởng \(\varphi\) theo tỷ số V/C:</h4>
+<h4 id="bảng-tra-hệ-số-ảnh-hưởng-math26-theo-tỷ-số-vc">Bảng tra hệ số ảnh hưởng \(\varphi\) theo tỷ số V/C:</h4>
 <table>
 <thead>
 <tr>
@@ -120,54 +132,62 @@ Buổi số 3 là bài học tự học (E-learning) đầu tiên trong chương
 </tr>
 </tbody>
 </table>
-<h4 id="2-cong-suat-ben-xe-trong-ngay">2. Công suất bến xe trong ngày</h4>
+<h4 id="2-công-suất-bến-xe-trong-ngày">2. Công suất bến xe trong ngày</h4>
 <p><strong>Công thức:</strong>
 \[B_{\text{ngày}} = T \times B_{\text{khai thác/giờ}}\]</p>
 <p>Trong đó:
 * \(B_{\text{ngày}}\): Công suất bến xe trong ngày (xe/ngày).
 * \(T\): Thời gian hoạt động của bến xe trong ngày (giờ/ngày).</p>
 <hr />
-<h4 id="huong-dan-giai-cac-vi-du-ung-dung-phan-2">HƯỚNG DẪN GIẢI CÁC VÍ DỤ ỨNG DỤNG (PHẦN 2)</h4>
-<h5 id="vi-du-1">Ví dụ 1:</h5>
+<h4 id="hướng-dẫn-giải-các-ví-dụ-ứng-dụng-phần-2">HƯỚNG DẪN GIẢI CÁC VÍ DỤ ỨNG DỤNG (PHẦN 2)</h4>
+<h5 id="ví-dụ-1">Ví dụ 1:</h5>
 <p>Một bến xe hoạt động từ 4h đến 21h hàng ngày. Khu vực đón trả khách có 3 vị trí, thời gian dãn cách trung bình giữa các chuyến xe là 5 phút/chuyến. Khảo sát đường tiếp cận vào bến có hệ số sử dụng khả năng thông hành (V/C) là 0,45 (45%). Xác định công suất bến xe trong ngày?</p>
-<p><strong>Bài giải chi tiết:</strong>
-1. <strong>Thời gian hoạt động trong ngày (\(T\)):</strong>
-   \[T = 21 - 4 = 17 \text{ giờ/ngày}\]
-2. <strong>Công suất tính toán lý thuyết trong một giờ (\(B_{\text{tính toán}}\)):</strong>
-   \[B_{\text{tính toán}} = N \times \frac{60}{t_{\text{headway}}} = 3 \times \frac{60}{5} = 36 \text{ xe/giờ}\]
-3. <strong>Xác định hệ số ảnh hưởng \(\varphi\):</strong>
-   Tỷ số \(V/C = 0,45 = 45\% &lt; 60\%\). Tra bảng, ta có: \(\varphi = 1,00\).
-4. <strong>Công suất khai thác thực tế trong một giờ (\(B_{\text{khai thác/giờ}}\)):</strong>
-   \[B_{\text{khai thác/giờ}} = \varphi \times B_{\text{tính toán}} = 1,00 \times 36 = 36 \text{ xe/giờ}\]
-5. <strong>Công suất bến xe trong ngày (\(B_{\text{ngày}}\)):</strong>
-   \[B_{\text{ngày}} = T \times B_{\text{khai thác/giờ}} = 17 \times 36 = 612 \text{ xe/ngày}\]</p>
+<details class="solution">
+<summary>Xem bài giải chi tiết</summary>
+<ol>
+<li><strong>Thời gian hoạt động trong ngày (\(T\)):</strong>
+   \[T = 21 - 4 = 17 \text{ giờ/ngày}\]</li>
+<li><strong>Công suất tính toán lý thuyết trong một giờ (\(B_{\text{tính toán}}\)):</strong>
+   \[B_{\text{tính toán}} = N \times \frac{60}{t_{\text{headway}}} = 3 \times \frac{60}{5} = 36 \text{ xe/giờ}\]</li>
+<li><strong>Xác định hệ số ảnh hưởng \(\varphi\):</strong>
+   Tỷ số \(V/C = 0,45 = 45\% &lt; 60\%\). Tra bảng, ta có: \(\varphi = 1,00\).</li>
+<li><strong>Công suất khai thác thực tế trong một giờ (\(B_{\text{khai thác/giờ}}\)):</strong>
+   \[B_{\text{khai thác/giờ}} = \varphi \times B_{\text{tính toán}} = 1,00 \times 36 = 36 \text{ xe/giờ}\]</li>
+<li><strong>Công suất bến xe trong ngày (\(B_{\text{ngày}}\)):</strong>
+   \[B_{\text{ngày}} = T \times B_{\text{khai thác/giờ}} = 17 \times 36 = 612 \text{ xe/ngày}\]</li>
+</ol>
 <p><em>Đáp số:</em> <strong>612 xe/ngày</strong>.</p>
+</details>
 <hr />
-<h5 id="vi-du-tu-hoc-vi-du-th">Ví dụ Tự học (Ví dụ TH):</h5>
+<h5 id="ví-dụ-tự-học-ví-dụ-th">Ví dụ Tự học (Ví dụ TH):</h5>
 <p>Một bến xe hoạt động từ 4h đến 22h hàng ngày. Khu vực đón trả khách có 3 vị trí, thời gian dãn cách trung bình giữa các chuyến xe là 15 phút/chuyến. Khảo sát đường tiếp cận vào bến có hệ số sử dụng khả năng thông hành (V/C) là 0,75 (75%). Xác định công suất bến xe trong ngày?</p>
-<p><strong>Bài giải chi tiết:</strong>
-1. <strong>Thời gian hoạt động trong ngày (\(T\)):</strong>
-   \[T = 22 - 4 = 18 \text{ giờ/ngày}\]
-2. <strong>Công suất tính toán lý thuyết trong một giờ (\(B_{\text{tính toán}}\)):</strong>
-   \[B_{\text{tính toán}} = N \times \frac{60}{t_{\text{headway}}} = 3 \times \frac{60}{15} = 12 \text{ xe/giờ}\]
-3. <strong>Xác định hệ số ảnh hưởng \(\varphi\):</strong>
-   Tỷ số \(V/C = 0,75 = 75\%\) (nằm trong khoảng 70% - 79%). Tra bảng, ta có: \(\varphi = 0,90\).
-4. <strong>Công suất khai thác thực tế trong một giờ (\(B_{\text{khai thác/giờ}}\)):</strong>
-   \[B_{\text{khai thác/giờ}} = \varphi \times B_{\text{tính toán}} = 0,90 \times 12 = 10,8 \text{ xe/giờ}\]
-5. <strong>Công suất bến xe trong ngày (\(B_{\text{ngày}}\)):</strong>
+<details class="solution">
+<summary>Xem bài giải chi tiết</summary>
+<ol>
+<li><strong>Thời gian hoạt động trong ngày (\(T\)):</strong>
+   \[T = 22 - 4 = 18 \text{ giờ/ngày}\]</li>
+<li><strong>Công suất tính toán lý thuyết trong một giờ (\(B_{\text{tính toán}}\)):</strong>
+   \[B_{\text{tính toán}} = N \times \frac{60}{t_{\text{headway}}} = 3 \times \frac{60}{15} = 12 \text{ xe/giờ}\]</li>
+<li><strong>Xác định hệ số ảnh hưởng \(\varphi\):</strong>
+   Tỷ số \(V/C = 0,75 = 75\%\) (nằm trong khoảng 70% - 79%). Tra bảng, ta có: \(\varphi = 0,90\).</li>
+<li><strong>Công suất khai thác thực tế trong một giờ (\(B_{\text{khai thác/giờ}}\)):</strong>
+   \[B_{\text{khai thác/giờ}} = \varphi \times B_{\text{tính toán}} = 0,90 \times 12 = 10,8 \text{ xe/giờ}\]</li>
+<li><strong>Công suất bến xe trong ngày (\(B_{\text{ngày}}\)):</strong>
    \[B_{\text{ngày}} = T \times B_{\text{khai thác/giờ}} = 18 \times 10,8 = 194,4 \text{ xe/ngày}\]
-   <em>Lưu ý thực tế:</em> Do số xe phải là số nguyên, công suất khai thác thực tế của bến xe sẽ được làm tròn xuống là <strong>194 xe/ngày</strong>.</p>
+   <em>Lưu ý thực tế:</em> Do số xe phải là số nguyên, công suất khai thác thực tế của bến xe sẽ được làm tròn xuống là <strong>194 xe/ngày</strong>.</li>
+</ol>
 <p><em>Đáp số:</em> <strong>194,4 xe/ngày (hoặc 194 xe/ngày)</strong>.</p>
+</details>
 <hr />
-<h3 id="phan-3-tinh-toan-cong-suat-toi-a-khu-vuc-ontra-kem-theo-dien-tich">PHẦN 3: TÍNH TOÁN CÔNG SUẤT TỐI ĐA KHU VỰC ĐÓN/TRẢ KÈM THEO DIỆN TÍCH</h3>
+<h3 id="phần-3-tính-toán-công-suất-tối-đa-khu-vực-đóntrả-kèm-theo-diện-tích">PHẦN 3: TÍNH TOÁN CÔNG SUẤT TỐI ĐA KHU VỰC ĐÓN/TRẢ KÈM THEO DIỆN TÍCH</h3>
 <p>Trong trường hợp muốn tính toán công suất tối đa của phân khu đón (trả) khách dựa trên diện tích hiện có của phân khu này tại ga bến, chúng ta áp dụng quy trình tính như sau:</p>
-<h4 id="1-xac-inh-so-vi-tri-on-tra-khach-toi-a-co-the-bo-tri-math44">1. Xác định số vị trí đón (trả) khách tối đa có thể bố trí (\(N\))</h4>
+<h4 id="1-xác-định-số-vị-trí-đón-trả-khách-tối-đa-có-thể-bố-trí-math44">1. Xác định số vị trí đón (trả) khách tối đa có thể bố trí (\(N\))</h4>
 <p>\[N = \left\lfloor \frac{S}{S_b} \right\rfloor\]</p>
 <p>Trong đó:
 * \(S\): Diện tích bến xe dành cho việc đón (trả) khách (\(m^2\)).
 * \(S_b\): Diện tích bình quân tối thiểu cần có cho một vị trí đón (trả) khách (\(m^2\)).
 * Ký hiệu \(\lfloor \dots \rfloor\) là phép toán làm tròn xuống lấy phần nguyên (do số vị trí đỗ xe phải là số nguyên dương).</p>
-<h4 id="2-cong-suat-ontra-khach-toi-a-trong-mot-gio-hoat-ong-math50">2. Công suất đón/trả khách tối đa trong một giờ hoạt động (\(B_{tk}\))</h4>
+<h4 id="2-công-suất-đóntrả-khách-tối-đa-trong-một-giờ-hoạt-động-math50">2. Công suất đón/trả khách tối đa trong một giờ hoạt động (\(B_{tk}\))</h4>
 <p>\[B_{tk} = \frac{60 \times N}{t_c + t_d \times (1 + Z \times c_v)}\]</p>
 <p>Trong đó:
 * \(B_{tk}\): Công suất đón hoặc trả khách tối đa của phân khu trong một giờ (xe/giờ).
@@ -177,28 +197,36 @@ Buổi số 3 là bài học tự học (E-learning) đầu tiên trong chương
 * \(c_v\): Hệ số biến động thời gian dừng đỗ của phương tiện (thường lấy mặc định bằng 1,00).
 * \(Z\): Hệ số điều chỉnh thời gian dừng đỗ do ảnh hưởng của dòng xe chờ phía sau (thường lấy mặc định bằng 1,00).</p>
 <hr />
-<h4 id="huong-dan-giai-cac-vi-du-ung-dung-phan-3">HƯỚNG DẪN GIẢI CÁC VÍ DỤ ỨNG DỤNG (PHẦN 3)</h4>
-<h5 id="vi-du-2">Ví dụ 2:</h5>
+<h4 id="hướng-dẫn-giải-các-ví-dụ-ứng-dụng-phần-3">HƯỚNG DẪN GIẢI CÁC VÍ DỤ ỨNG DỤNG (PHẦN 3)</h4>
+<h5 id="ví-dụ-2">Ví dụ 2:</h5>
 <p>Một bến xe khách có diện tích dành riêng cho việc trả khách là \(S = 140\ m^2\). Diện tích định mức cho một vị trí trả khách là \(S_b = 40\ m^2/vị\ trí\). Thời gian trống giữa hai xe liên tiếp là \(t_c = 1,5\) phút. Thời gian dừng trả khách trung bình của một xe là \(t_d = 1\) phút. Giả thiết hệ số biến động \(c_v = 1\) và hệ số điều chỉnh hàng chờ \(Z = 1\). Hãy xác định công suất trả khách tối đa của bến xe trong một giờ hoạt động?</p>
-<p><strong>Bài giải chi tiết:</strong>
-1. <strong>Xác định số vị trí trả khách tối đa (\(N\)):</strong>
-   \[N = \left\lfloor \frac{S}{S_b} \right\rfloor = \left\lfloor \frac{140}{40} \right\rfloor = \lfloor 3,5 \rfloor = 3 \text{ vị trí}\]
-2. <strong>Tính công suất tối đa khu vực trả khách trong 1 giờ (\(B_{tk}\)):</strong>
+<details class="solution">
+<summary>Xem bài giải chi tiết</summary>
+<ol>
+<li><strong>Xác định số vị trí trả khách tối đa (\(N\)):</strong>
+   \[N = \left\lfloor \frac{S}{S_b} \right\rfloor = \left\lfloor \frac{140}{40} \right\rfloor = \lfloor 3,5 \rfloor = 3 \text{ vị trí}\]</li>
+<li><strong>Tính công suất tối đa khu vực trả khách trong 1 giờ (\(B_{tk}\)):</strong>
    \[B_{tk} = \frac{60 \times N}{t_c + t_d \times (1 + Z \times c_v)} = \frac{60 \times 3}{1,5 + 1 \times (1 + 1 \times 1)} = \frac{180}{1,5 + 2} = \frac{180}{3,5} \approx 51,4 \text{ xe/giờ}\]
-   Làm tròn thực tế: <strong>51 xe/giờ</strong>.</p>
+   Làm tròn thực tế: <strong>51 xe/giờ</strong>.</li>
+</ol>
 <p><em>Đáp số:</em> <strong>51 xe/giờ</strong>.</p>
+</details>
 <hr />
-<h5 id="vi-du-2-tu-hoc-vi-du-2-th">Ví dụ 2 Tự học (Ví dụ 2 TH):</h5>
+<h5 id="ví-dụ-2-tự-học-ví-dụ-2-th">Ví dụ 2 Tự học (Ví dụ 2 TH):</h5>
 <p>Một bến xe có diện tích dành riêng cho việc trả khách là \(S = 500\ m^2\). Diện tích định mức cho một vị trí trả khách là \(S_b = 40\ m^2/vị\ trí\). Thời gian trống giữa hai xe liên tiếp là \(t_c = 5\) phút. Thời gian dừng trả khách trung bình của một xe là \(t_d = 10\) phút. Giả thiết hệ số biến động \(c_v = 1\) và hệ số điều chỉnh hàng chờ \(Z = 1\). Xác định công suất trả khách tối đa của khu vực này trong một giờ?</p>
-<p><strong>Bài giải chi tiết:</strong>
-1. <strong>Xác định số vị trí trả khách tối đa (\(N\)):</strong>
-   \[N = \left\lfloor \frac{S}{S_b} \right\rfloor = \left\lfloor \frac{500}{40} \right\rfloor = \lfloor 12,5 \rfloor = 12 \text{ vị trí}\]
-2. <strong>Tính công suất tối đa khu vực trả khách trong 1 giờ (\(B_{tk}\)):</strong>
+<details class="solution">
+<summary>Xem bài giải chi tiết</summary>
+<ol>
+<li><strong>Xác định số vị trí trả khách tối đa (\(N\)):</strong>
+   \[N = \left\lfloor \frac{S}{S_b} \right\rfloor = \left\lfloor \frac{500}{40} \right\rfloor = \lfloor 12,5 \rfloor = 12 \text{ vị trí}\]</li>
+<li><strong>Tính công suất tối đa khu vực trả khách trong 1 giờ (\(B_{tk}\)):</strong>
    \[B_{tk} = \frac{60 \times N}{t_c + t_d \times (1 + Z \times c_v)} = \frac{60 \times 12}{5 + 10 \times (1 + 1 \times 1)} = \frac{720}{5 + 20} = \frac{720}{25} = 28,8 \text{ xe/giờ}\]
-   Làm tròn thực tế: <strong>28 xe/giờ</strong> (hoặc 28,8 xe/giờ).</p>
+   Làm tròn thực tế: <strong>28 xe/giờ</strong> (hoặc 28,8 xe/giờ).</li>
+</ol>
 <p><em>Đáp số:</em> <strong>28,8 xe/giờ</strong>.</p>
+</details>
 <hr />
-<h3 id="phan-4-tinh-toan-cong-suat-khu-vuc-cho-tai-holding-area">PHẦN 4: TÍNH TOÁN CÔNG SUẤT KHU VỰC CHỜ TÀI (HOLDING AREA)</h3>
+<h3 id="phần-4-tính-toán-công-suất-khu-vực-chờ-tài-holding-area">PHẦN 4: TÍNH TOÁN CÔNG SUẤT KHU VỰC CHỜ TÀI (HOLDING AREA)</h3>
 <p>Khu vực chờ tài (hoặc khu vực đỗ chờ của phương tiện trước khi xếp dỡ/làm hàng) có vai trò như một bộ đệm giảm tải cho khu vực đón trả khách chính. Công suất chung của khu vực chờ tài là tổng công suất của các vị trí đỗ xe chờ tài thuộc các tuyến đang hoạt động.</p>
 <p><strong>Công thức tổng quát:</strong>
 \[B_{ct} = \sum_{i=1}^{m} \frac{60 \times n_i}{t_{ct,i}}\]</p>
@@ -210,18 +238,22 @@ Buổi số 3 là bài học tự học (E-learning) đầu tiên trong chương
 <p>Nếu tất cả các tuyến có số vị trí chờ tài và thời gian chờ tài giống nhau (\(n_i = n_t\) và \(t_{ct,i} = t_{ct}\)), công thức đơn giản hóa thành:
 \[B_{ct} = m \times \frac{60 \times n_t}{t_{ct}}\]</p>
 <hr />
-<h4 id="huong-dan-giai-vi-du-ung-dung-phan-4">HƯỚNG DẪN GIẢI VÍ DỤ ỨNG DỤNG (PHẦN 4)</h4>
-<h5 id="vi-du-3">Ví dụ 3:</h5>
+<h4 id="hướng-dẫn-giải-ví-dụ-ứng-dụng-phần-4">HƯỚNG DẪN GIẢI VÍ DỤ ỨNG DỤNG (PHẦN 4)</h4>
+<h5 id="ví-dụ-3">Ví dụ 3:</h5>
 <p>Một bến xe buýt hiện tại đang điều phối 4 tuyến xe buýt hoạt động tại bến. Giới hạn mỗi tuyến xe buýt được phân bổ tối đa \(n_t = 4\) vị trí đỗ chờ tài tại bến. Thời gian đỗ chờ tài trung bình của mỗi phương tiện trước khi vào vị trí đón khách là \(t_{ct} = 10\) phút. Xác định công suất khai thác của khu vực chờ tài tại bến xe buýt này?</p>
-<p><strong>Bài giải chi tiết:</strong>
-* Số tuyến xe buýt hoạt động (\(m\)): 4 tuyến.
-* Số vị trí chờ tài phân bổ cho mỗi tuyến (\(n_t\)): 4 vị trí.
-* Thời gian chờ tài trung bình (\(t_{ct}\)): 10 phút.
-* Áp dụng công thức đơn giản hóa:
-  \[B_{ct} = m \times \frac{60 \times n_t}{t_{ct}} = 4 \times \frac{60 \times 4}{10} = 4 \times 24 = 96 \text{ xe/giờ}\]</p>
+<details class="solution">
+<summary>Xem bài giải chi tiết</summary>
+<ul>
+<li>Số tuyến xe buýt hoạt động (\(m\)): 4 tuyến.</li>
+<li>Số vị trí chờ tài phân bổ cho mỗi tuyến (\(n_t\)): 4 vị trí.</li>
+<li>Thời gian chờ tài trung bình (\(t_{ct}\)): 10 phút.</li>
+<li>Áp dụng công thức đơn giản hóa:
+  \[B_{ct} = m \times \frac{60 \times n_t}{t_{ct}} = 4 \times \frac{60 \times 4}{10} = 4 \times 24 = 96 \text{ xe/giờ}\]</li>
+</ul>
 <p><em>Đáp số:</em> <strong>96 xe/giờ</strong>.</p>
+</details>
 <hr />
-<h3 id="huong-dan-tu-hoc-va-luu-y-cho-sinh-vien">HƯỚNG DẪN TỰ HỌC VÀ LƯU Ý CHO SINH VIÊN</h3>
+<h3 id="hướng-dẫn-tự-học-và-lưu-ý-cho-sinh-viên">HƯỚNG DẪN TỰ HỌC VÀ LƯU Ý CHO SINH VIÊN</h3>
 <ol>
 <li><strong>Lý thuyết:</strong> Hãy liên hệ cấu trúc vận hành chung (4 vùng chức năng) với thực tế khi các em đi Sân bay Tân Sơn Nhất hoặc Bến xe Miền Đông/Miền Tây. Các phân khu đó được bố trí thế nào? Có xảy ra hiện tượng nghẽn cổ chai (bottleneck) ở vùng tiếp cận hay hậu phương không?</li>
 <li><strong>Bài tập tính toán:</strong>
@@ -231,7 +263,7 @@ Buổi số 3 là bài học tự học (E-learning) đầu tiên trong chương
 </ol>
 <p>Chúc các em hoàn thành tốt nội dung tự học Buổi 3!</p>
 <hr />
-<h3 id="tai-lieu-oc-them-thuc-te-references">TÀI LIỆU ĐỌC THÊM THỰC TẾ (REFERENCES)</h3>
+<h3 id="tài-liệu-đọc-thêm-thực-tế-references">TÀI LIỆU ĐỌC THÊM THỰC TẾ (REFERENCES)</h3>
 <p>Các tài liệu thực tiễn dưới đây nằm trong thư mục  để phục vụ đối chiếu thực tiễn:
 * <strong>Quyết định 442/QĐ-TTg năm 2024 về Điều chỉnh Quy hoạch Cảng biển Việt Nam</strong>
 * <strong>Báo cáo dự án Cảng trung chuyển quốc tế Cần Giờ</strong></p></main>

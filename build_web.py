@@ -78,6 +78,8 @@ def strip_broken_links(md_text):
     return md_text
 
 
+from pymdownx.slugs import slugify
+
 def make_md():
     return markdown.Markdown(extensions=[
         "extra", "sane_lists", "toc", "attr_list", "md_in_html",
@@ -88,13 +90,65 @@ def make_md():
                 {"name": "mermaid", "class": "mermaid", "format": fence_div_format}
             ]
         },
+        "toc": {"slugify": slugify(case="lower"), "permalink": False},
     })
 
 
+# --- collapsible worked solutions ---------------------------------------
+SOL_RE = re.compile(r"^\s*(?:#{6}\s*)?\*{0,2}\s*Bài giải chi tiết\s*:?\s*\*{0,2}\s*$", re.I)
+BOUND_HEAD_RE = re.compile(r"^#{1,5}\s")   # any heading H1..H5 ends a solution
+HR_RE = re.compile(r"^\s*-{3,}\s*$")
+
+
+def wrap_solutions(text):
+    """Fold each 'Bài giải chi tiết' block into a collapsed <details> so students
+    attempt the problem before revealing the solution."""
+    lines = text.split("\n")
+    out, i, n = [], 0, len(lines)
+    while i < n:
+        if SOL_RE.match(lines[i]):
+            j = i + 1
+            body = []
+            while j < n and not BOUND_HEAD_RE.match(lines[j]) and not HR_RE.match(lines[j]):
+                body.append(lines[j])
+                j += 1
+            while body and body[-1].strip() == "":
+                body.pop()
+            if out and out[-1].strip() != "":
+                out.append("")
+            out += ['<details class="solution" markdown="1">',
+                    '<summary>Xem bài giải chi tiết</summary>', ""]
+            out += body
+            out += ["", "</details>", ""]
+            i = j
+        else:
+            out.append(lines[i])
+            i += 1
+    return "\n".join(out)
+
+
+def build_toc(md):
+    """Compact TOC card from the H3 section headings."""
+    items = []
+
+    def walk(toks):
+        for t in toks:
+            if t["level"] == 3:
+                items.append((t["id"], t["name"]))
+            if t.get("children"):
+                walk(t["children"])
+
+    walk(md.toc_tokens)
+    if not items:
+        return ""
+    lis = "\n".join(f'    <li><a href="#{tid}">{html.escape(name)}</a></li>' for tid, name in items)
+    return ('<nav class="toc">\n  <p class="toc-title">Nội dung bài học</p>\n'
+            f'  <ol>\n{lis}\n  </ol>\n</nav>\n')
+
+
 def convert(raw):
-    """Protect $$...$$ and $...$ from the Markdown parser, then hand them to
-    KaTeX as \\[...\\] / \\(...\\). Handles inline, display, and indented math
-    uniformly regardless of surrounding blank lines."""
+    """Fold solutions, protect $$...$$ / $...$ from Markdown (restored as
+    \\[...\\] / \\(...\\) for KaTeX), then inject a TOC card."""
     store = []
 
     def repl_block(m):
@@ -105,10 +159,17 @@ def convert(raw):
         store.append(("i", m.group(1)))
         return f"@@MATH{len(store) - 1}@@"
 
-    text = re.sub(r"\$\$(.+?)\$\$", repl_block, raw, flags=re.S)
+    text = wrap_solutions(raw)
+    text = re.sub(r"\$\$(.+?)\$\$", repl_block, text, flags=re.S)
     text = re.sub(r"(?<!\$)\$(?!\$)([^\n$]+?)\$(?!\$)", repl_inline, text)
 
-    out = make_md().convert(text)
+    md = make_md()
+    out = md.convert(text)
+
+    toc = build_toc(md)
+    idx = out.find("<h3")
+    if toc and idx != -1:
+        out = out[:idx] + toc + out[idx:]
 
     def restore(m):
         kind, content = store[int(m.group(1))]

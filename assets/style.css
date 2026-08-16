@@ -80,6 +80,35 @@ body{
 .content thead th{background:var(--th); color:var(--th-ink); font-weight:700}
 .content tbody tr:nth-child(even){background:var(--stripe)}
 
+/* table of contents card */
+.toc{
+  background:var(--accent-soft); border:1px solid var(--line);
+  border-left:5px solid var(--teal); border-radius:8px;
+  padding:1em 1.3em .9em; margin:1.6em 0; font-size:.96rem;
+}
+.toc .toc-title{margin:0 0 .5em; font-weight:700; color:var(--teal-dark); font-size:1.05rem}
+.toc ol{margin:0; padding-left:1.4em}
+.toc li{margin:.25em 0}
+.toc a{color:var(--teal-dark); text-decoration:none}
+.toc a:hover{text-decoration:underline}
+
+/* collapsible worked solutions */
+details.solution{
+  margin:1.2em 0; border:1px solid var(--line); border-left:4px solid var(--teal);
+  border-radius:8px; background:var(--card); overflow:hidden;
+}
+details.solution>summary{
+  cursor:pointer; padding:.7em 1em; margin:0; font-weight:700;
+  color:var(--teal-dark); background:var(--accent-soft);
+  list-style:none; user-select:none;
+}
+details.solution>summary::-webkit-details-marker{display:none}
+details.solution>summary::before{content:"\25B8\00a0"; color:var(--teal)}
+details.solution[open]>summary::before{content:"\25BE\00a0"}
+details.solution[open]>summary{border-bottom:1px solid var(--line)}
+details.solution>*:not(summary){margin-left:1.1em; margin-right:1.1em}
+details.solution>*:nth-child(2){margin-top:.9em}
+
 /* mermaid */
 .mermaid{
   text-align:center; margin:1.4em 0; background:var(--card);
