@@ -106,6 +106,129 @@ Khi xe đầu kéo chở container ra/vào cảng, quy trình tác nghiệp bao 
 
 ---
 
+### PHẦN 5: QUY TRÌNH THỰC TẾ TẠI CẢNG CONTAINER QUỐC TẾ SP-ITC
+
+Để giúp các em liên hệ lý thuyết với thực tế vận hành tại các cảng biển hiện đại ở Việt Nam, dưới đây là chi tiết các quy trình giao nhận container tại cổng (Gate) và quy trình đóng rút hàng tại kho CFS của **Cảng Container Quốc tế SP-ITC** (Quận 9, TP.HCM) – một trong những cảng container năng động áp dụng giải pháp cảng điện tử hiện đại.
+
+#### 1. Quy trình giao nhận container tại Cổng cảng (SOP Gate)
+
+##### a) Quy trình nhận container từ Cảng về (Container Pick-up Process)
+Áp dụng cho khách hàng đến cảng nhận container hàng nhập khẩu hoặc nhận container rỗng về đóng hàng xuất khẩu. Quy trình gồm các bước:
+1. **Làm thủ tục tại Thương vụ:** Khách hàng/tài xế đỗ xe tại bãi chờ, đến phòng Thương vụ xuất trình Booking/Lệnh giao container, đóng phí dịch vụ, nhận hóa đơn VAT và Lệnh Giao nhận (EIO) (nếu chưa làm lệnh điện tử E-port).
+2. **Kiểm tra tại bốt bảo vệ cổng vào:** Tài xế xuất trình Bằng lái/CMND, trình lệnh EIO để nhân viên cổng khai báo số xe/rơ-moóc lên hệ thống. Tài xế nhận lại EIO, nhận Thẻ vào cổng, Phiếu vị trí bãi (LS) và tấm thẻ cẩu bãi (BAT).
+3. **Tác nghiệp tại bãi container (CY):** Tài xế lái xe vào đúng vị trí chỉ định trên Phiếu LS, trình thẻ BAT cho nhân viên lái cẩu bãi (RTG, Reach Stacker hoặc Empty Handler) để gắp container lên xe.
+4. **Làm thủ tục tại cổng ra:** Tài xế lái xe ra cổng, trả lại Thẻ vào cổng và BAT cho bảo vệ, nộp liên xanh của Lệnh giao nhận EIR, nhận lại Bằng lái/CMND và ký nhận Phiếu EIR (Liên Hồng).
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor TX as Tài xế / Chủ hàng
+    participant TV as Phòng Thương vụ
+    participant C as Cổng Bảo vệ (Vào/Ra)
+    participant B as Bãi CY (Lái cẩu)
+
+    TX->>TV: Trình lệnh giao cont/Booking & đóng phí
+    TV-->>TX: Cấp hóa đơn VAT & Lệnh giao nhận (EIO)
+    TX->>C: Xuất trình Bằng lái & lệnh EIO tại cổng vào
+    C-->>TX: Khai báo số xe, cấp Thẻ cổng, Phiếu vị trí (LS), thẻ BAT
+    TX->>B: Di chuyển đến vị trí LS & trình thẻ BAT cho lái cẩu
+    B-->>TX: Gắp cấp container lên xe đầu kéo
+    TX->>C: Trả Thẻ cổng & BAT; nộp EIR liên xanh tại cổng ra
+    C-->>TX: Trả lại Bằng lái, ký & nhận Phiếu EIR (Liên Hồng)
+```
+
+##### b) Quy trình hạ container vào Cảng (Container Drop-off Process)
+Áp dụng cho khách hàng mang container hàng xuất khẩu đến hạ tại cảng chờ xếp lên tàu hoặc trả container rỗng sau khi rút hàng. Quy trình gồm các bước:
+1. **Chuẩn bị lệnh nâng hạ:** Chủ hàng/tài xế trình Packing List hoặc Lệnh hạ rỗng tại phòng Thương vụ để đóng phí và nhận EIO (nếu chưa chuẩn bị lệnh trực tuyến).
+2. **Kiểm tra và cân container:** Tài xế trình EIO cho nhân viên kiểm cont để xác nhận tình trạng vỏ. Đối với container hàng xuất khẩu, xe bắt buộc di chuyển vào **CỔNG SỐ 1** để cân tải trọng (xác nhận VGM).
+3. **Kiểm soát cổng vào:** Tài xế trình lệnh EIO, xuất trình Bằng lái/CMND, nhận Thẻ vào cổng, Phiếu vị trí bãi (LS) và tấm thẻ cẩu bãi (BAT).
+4. **Tác nghiệp hạ container tại bãi (CY):** Tài xế lái xe đến vị trí trên phiếu LS, trình thẻ BAT cho lái cẩu bãi để hạ container xuống bãi.
+5. **Kiểm soát cổng ra:** Tài xế trả Thẻ cổng & BAT, nhận lại Bằng lái, ký và nhận Phiếu EIR (Liên Hồng) xác nhận đã hạ container.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor TX as Tài xế / Chủ hàng
+    participant TV as Phòng Thương vụ / Cân cont
+    participant C as Cổng Bảo vệ (Vào/Ra)
+    participant B as Bãi CY (Lái cẩu)
+
+    TX->>TV: Trình Packing List/Lệnh hạ rỗng & đóng phí
+    TV-->>TX: Kiểm tra vỏ cont & cân cont hàng (Cổng 1 lấy VGM)
+    TX->>C: Trình lệnh EIO & Bằng lái tại cổng vào
+    C-->>TX: Cấp Thẻ cổng, Phiếu vị trí (LS), thẻ BAT
+    TX->>B: Di chuyển đến vị trí LS & trình BAT cho lái cẩu
+    B-->>TX: Hạ container từ xe xuống bãi CY
+    TX->>C: Trả Thẻ cổng & BAT tại cổng ra
+    C-->>TX: Trả Bằng lái, ký & nhận Phiếu EIR (Liên Hồng)
+```
+
+#### 2. Quy trình đóng rút hàng tại kho CFS (SOP CFS)
+
+Khu vực kho CFS và bãi FCL CFS là nơi thực hiện các tác nghiệp đóng gói hàng lẻ vào container (Stuffing) hoặc rút hàng từ container để giao nhận bằng xe tải (Unstuffing).
+
+##### a) Quy trình đóng hàng nguyên container (FCL Stuffing Process)
+1. **Lập lệnh đóng hàng tại Thương vụ:** Chủ hàng trình Booking/Lệnh đóng hàng, đóng phí dịch vụ, nhận hóa đơn VAT và Lệnh Đóng rút (USO).
+2. **Lái xe đăng ký vào cổng:** Tài xế xe tải chở hàng đến cổng xuất trình Bằng lái/CMND, nhận Thẻ vào cổng.
+3. **Đăng ký làm hàng tại Ban kho hàng (CFS Section):** Chủ hàng/tài xế trình lệnh USO, đăng ký thời gian làm hàng và nhận Phiếu điều động nhân lực xếp dỡ.
+4. **Thực hiện đóng hàng tại bãi CFS:** Nhân viên kho CFS phối hợp cùng chủ hàng đóng hàng từ xe tải vào container. Ghi nhận thời gian bắt đầu/kết thúc và tình trạng container lên lệnh USO.
+5. **Hoàn tất thủ tục và rời cảng:**
+   - **Tài xế:** Trình phiếu USR (Phiếu đóng rút hàng), trả thẻ cổng để nhận lại Bằng lái/CMND.
+   - **Chủ hàng:** Trả lại lệnh USO có xác nhận của CFS hiện trường, nộp danh sách đóng gói hàng hóa (Packing List), ký nhận Phiếu USR (Liên Hồng).
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor CH as Chủ hàng / Tài xế xe tải
+    participant TV as Phòng Thương vụ
+    participant C as Cổng Bảo vệ
+    participant KH as Ban Kho hàng CFS
+    participant B as Bãi đóng rút hàng CFS
+
+    CH->>TV: Trình Booking/Lệnh đóng hàng & đóng phí
+    TV-->>CH: Cấp Hóa đơn & Lệnh Đóng rút (USO)
+    CH->>C: Tài xế trình Bằng lái tại cổng vào
+    C-->>CH: Cấp Thẻ vào cổng cho xe tải
+    CH->>KH: Trình USO & Đăng ký thời gian làm hàng
+    KH-->>CH: Cấp Phiếu điều động nhân lực
+    CH->>B: Đóng hàng từ xe tải vào container; xác nhận lên USO
+    CH->>C: Tài xế trả Thẻ cổng, nhận lại Bằng lái tại cổng ra
+    CH->>KH: Chủ hàng nộp USO xác nhận + Packing List
+    KH-->>CH: Ký & nhận Phiếu đóng rút hàng USR (Liên Hồng)
+```
+
+##### b) Quy trình rút hàng nguyên container (FCL Unstuffing Process)
+1. **Lập lệnh rút hàng tại Thương vụ:** Chủ hàng xuất trình Lệnh giao container rút ruột (DO) hoặc Giấy giới thiệu, đóng phí dịch vụ, nhận Lệnh Đóng rút (USO).
+2. **Xe tải đăng ký vào cổng:** Tài xế xe tải vào cổng xuất trình Bằng lái/CMND, nhận Thẻ vào cổng.
+3. **Đăng ký tại Ban kho hàng:** Trình lệnh USO để đăng ký thời gian rút hàng và nhận Phiếu điều động nhân lực.
+4. **Thực hiện rút hàng tại bãi CFS:** Tiến hành rút hàng từ container lên xe tải dưới sự giám sát của chủ hàng và CFS. Ghi nhận thời gian và tình trạng container rỗng sau rút hàng lên USO.
+5. **Hoàn tất thủ tục và rời cảng:**
+   - **Tài xế:** Trình phiếu USR hoặc Phiếu giao hàng (nếu rút nhiều lần), trả thẻ cổng để nhận lại Bằng lái/CMND.
+   - **Chủ hàng:** Trả lệnh USO có xác nhận CFS hiện trường, ký nhận Phiếu USR (Liên Hồng) hoàn thành giao nhận hàng.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor CH as Chủ hàng / Tài xế xe tải
+    participant TV as Phòng Thương vụ
+    participant C as Cổng Bảo vệ
+    participant KH as Ban Kho hàng CFS
+    participant B as Bãi đóng rút hàng CFS
+
+    CH->>TV: Trình lệnh DO/Giấy giới thiệu & đóng phí
+    TV-->>CH: Cấp Hóa đơn & Lệnh Đóng rút (USO)
+    CH->>C: Tài xế trình Bằng lái tại cổng vào
+    C-->>CH: Cấp Thẻ vào cổng cho xe tải
+    CH->>KH: Trình USO & Đăng ký thời gian làm hàng
+    KH-->>CH: Cấp Phiếu điều động nhân lực
+    CH->>B: Rút hàng từ container lên xe tải; xác nhận cont rỗng
+    CH->>C: Tài xế trình USR/Phiếu giao hàng, trả Thẻ cổng, nhận Bằng lái
+    CH->>KH: Chủ hàng trả USO xác nhận hiện trường
+    KH-->>CH: Ký & nhận Phiếu đóng rút hàng USR (Liên Hồng)
+```
+
+---
+
 ### CÂU HỎI TỰ LUYỆN
 1. Tại sao nói hệ số sử dụng dung lượng bãi ($\eta_{use}$) chỉ nên khống chế ở mức 70% - 80%? Điều gì xảy ra nếu bãi chứa bị đầy 95%?
 2. Hãy so sánh sự khác nhau về mặt kinh tế và vận hành giữa việc sử dụng cẩu RTG và xe nâng Reach Stacker tại bãi cảng.
