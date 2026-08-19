@@ -30,19 +30,18 @@
     <li><a href="#phần-3-thiết-bị-xếp-dỡ-tại-bãi-container-yard-equipment">PHẦN 3: THIẾT BỊ XẾP DỠ TẠI BÃI CONTAINER (YARD EQUIPMENT)</a></li>
     <li><a href="#phần-4-điều-phối-cổng-cảng-gate-operations">PHẦN 4: ĐIỀU PHỐI CỔNG CẢNG (GATE OPERATIONS)</a></li>
     <li><a href="#phần-5-quy-trình-thực-tế-tại-cảng-container-quốc-tế-sp-itc">PHẦN 5: QUY TRÌNH THỰC TẾ TẠI CẢNG CONTAINER QUỐC TẾ SP-ITC</a></li>
-    <li><a href="#câu-hỏi-tự-luyện">CÂU HỎI TỰ LUYỆN</a></li>
-    <li><a href="#tài-liệu-tham-khảo">TÀI LIỆU THAM KHẢO</a></li>
-    <li><a href="#tài-liệu-đọc-thêm-thực-tế-references">TÀI LIỆU ĐỌC THÊM THỰC TẾ (REFERENCES)</a></li>
   </ol>
 </nav>
 <h3 id="giới-thiệu-bài-học">GIỚI THIỆU BÀI HỌC</h3>
 <p>Chào các em sinh viên,
 Nội dung tự học của <strong>Buổi số 9 (E-learning 3)</strong> sẽ giúp các em tìm hiểu về hai khu vực tác nghiệp vô cùng quan trọng tại đầu mối cảng biển: <strong>Khu vực bãi chứa (Yard)</strong> và <strong>Khu vực cổng cảng (Gate)</strong>. Đây là những mắt xích chịu trách nhiệm lưu trữ tạm thời hàng hóa và kết nối trực tiếp với dòng phương tiện vận tải hậu phương (đường bộ).</p>
-<p>Các em cần nghiên cứu kỹ tài liệu này để nắm vững:
-1. Phân loại bãi cảng (CY, CFS).
-2. Các công thức toán học tính dung lượng và diện tích bãi cần thiết.
-3. Nguyên lý hoạt động của các thiết bị xếp dỡ bãi (RTG, RMG, Reach Stacker).
-4. Quy trình tác nghiệp tại cổng cảng và giải pháp điều phối chống ùn tắc.</p>
+<p>Các em cần nghiên cứu kỹ tài liệu này để nắm vững:</p>
+<ol>
+<li>Phân loại bãi cảng (CY, CFS).</li>
+<li>Các công thức toán học tính dung lượng và diện tích bãi cần thiết.</li>
+<li>Nguyên lý hoạt động của các thiết bị xếp dỡ bãi (RTG, RMG, Reach Stacker).</li>
+<li>Quy trình tác nghiệp tại cổng cảng và giải pháp điều phối chống ùn tắc.</li>
+</ol>
 <p>Sau khi đọc xong tài liệu, các em hãy thực hiện bộ 20 câu hỏi trắc nghiệm ôn tập trên hệ thống Moodle.</p>
 <hr />
 <h3 id="phần-1-phân-loại-bãi-chứa-tại-cảng-biển">PHẦN 1: PHÂN LOẠI BÃI CHỨA TẠI CẢNG BIỂN</h3>
@@ -69,19 +68,27 @@ Nội dung tự học của <strong>Buổi số 9 (E-learning 3)</strong> sẽ g
 <p>Để thiết kế hoặc đánh giá hiệu quả bãi cảng, nhà quản trị cần tính toán dung lượng bãi chứa (\(E_{CY}\)) và diện tích bãi cần thiết (\(A_{CY}\)).</p>
 <h4 id="1-tính-toán-dung-lượng-bãi-chứa-math4---teu">1. Tính toán dung lượng bãi chứa (\(E_{CY}\) - TEU)</h4>
 <p>Dung lượng bãi chứa biểu thị số lượng container tối đa (tính bằng TEU) cần lưu trữ tại bãi ở một thời điểm thiết kế:</p>
-<p>\[E_{CY} = \frac{Q_{tq} \times t_l \times k_k}{365}\]</p>
-<p>Trong đó:
-* \(Q_{tq}\): Sản lượng container thông qua cảng trong năm (TEU/năm).
-* \(t_l\): Thời gian lưu bãi trung bình của một container (ngày). (Ví dụ: cont nhập thường lưu 5-7 ngày, cont xuất lưu 3-4 ngày).
-* \(k_k\): Hệ số không đồng đều của lượng hàng hóa đến cảng (thường lấy \(k_k \approx 1,1 - 1,25\)).</p>
+<p>\[
+E_{CY} = \frac{Q_{tq} \times t_l \times k_k}{365}
+\]</p>
+<p>Trong đó:</p>
+<ul>
+<li>\(Q_{tq}\): Sản lượng container thông qua cảng trong năm (TEU/năm).</li>
+<li>\(t_l\): Thời gian lưu bãi trung bình của một container (ngày). (Ví dụ: cont nhập thường lưu 5-7 ngày, cont xuất lưu 3-4 ngày).</li>
+<li>\(k_k\): Hệ số không đồng đều của lượng hàng hóa đến cảng (thường lấy \(k_k \approx 1,1 - 1,25\)).</li>
+</ul>
 <h4 id="2-tính-toán-diện-tích-bãi-cần-thiết-math9---math10">2. Tính toán diện tích bãi cần thiết (\(A_{CY}\) - \(m^2\))</h4>
 <p>Từ dung lượng chứa \(E_{CY}\), diện tích mặt bằng bãi thực tế được tính bằng công thức:</p>
-<p>\[A_{CY} = \frac{E_{CY} \times F_{xd} \times F_{sub}}{h_c \times \eta_{use}}\]</p>
-<p>Trong đó:
-* \(F_{xd}\): Diện tích chiếm dụng hình chiếu bằng của 1 TEU (tiêu chuẩn \(F_{xd} \approx 15 \, m^2\) bao gồm cả khe hở an toàn).
-* \(h_c\): Chiều cao xếp chồng container trung bình thực tế tại bãi (tùy thuộc thiết bị xếp dỡ, thường từ 3 đến 5 tầng).
-* \(F_{sub}\): Hệ số phụ trợ tính đến diện tích đường đi cho thiết bị bãi, văn phòng, nhà xưởng (thường từ \(1,4\) đến \(1,8\)).
-* \(\eta_{use}\): Hệ số sử dụng dung lượng tối đa của bãi để tránh bị nghẽn (thường khống chế \(\eta_{use} \approx 0,7 - 0,8\)). Nếu bãi vượt quá 80% công suất thiết kế, hiệu quả vận hành sẽ giảm mạnh do phát sinh đảo chuyển container.</p>
+<p>\[
+A_{CY} = \frac{E_{CY} \times F_{xd} \times F_{sub}}{h_c \times \eta_{use}}
+\]</p>
+<p>Trong đó:</p>
+<ul>
+<li>\(F_{xd}\): Diện tích chiếm dụng hình chiếu bằng của 1 TEU (tiêu chuẩn \(F_{xd} \approx 15 \, m^2\) bao gồm cả khe hở an toàn).</li>
+<li>\(h_c\): Chiều cao xếp chồng container trung bình thực tế tại bãi (tùy thuộc thiết bị xếp dỡ, thường từ 3 đến 5 tầng).</li>
+<li>\(F_{sub}\): Hệ số phụ trợ tính đến diện tích đường đi cho thiết bị bãi, văn phòng, nhà xưởng (thường từ \(1,4\) đến \(1,8\)).</li>
+<li>\(\eta_{use}\): Hệ số sử dụng dung lượng tối đa của bãi để tránh bị nghẽn (thường khống chế \(\eta_{use} \approx 0,7 - 0,8\)). Nếu bãi vượt quá 80% công suất thiết kế, hiệu quả vận hành sẽ giảm mạnh do phát sinh đảo chuyển container.</li>
+</ul>
 <hr />
 <h3 id="phần-3-thiết-bị-xếp-dỡ-tại-bãi-container-yard-equipment">PHẦN 3: THIẾT BỊ XẾP DỠ TẠI BÃI CONTAINER (YARD EQUIPMENT)</h3>
 <p>Việc lựa chọn thiết bị bãi ảnh hưởng trực tiếp đến mật độ xếp chồng (chiều cao \(h_c\)) và diện tích phụ trợ (\(F_{sub}\)). Ba loại thiết bị bãi phổ biến nhất gồm:</p>
@@ -134,10 +141,12 @@ Nội dung tự học của <strong>Buổi số 9 (E-learning 3)</strong> sẽ g
 <h3 id="phần-4-điều-phối-cổng-cảng-gate-operations">PHẦN 4: ĐIỀU PHỐI CỔNG CẢNG (GATE OPERATIONS)</h3>
 <p>Cổng cảng (Port Gate) đóng vai trò là "nút cổ chai" kết nối giao thông đường bộ hậu phương với khu vực lưu trữ bãi.</p>
 <h4 id="1-quy-trình-tác-nghiệp-tại-cổng-cảng">1. Quy trình tác nghiệp tại cổng cảng</h4>
-<p>Khi xe đầu kéo chở container ra/vào cảng, quy trình tác nghiệp bao gồm:
-1. <strong>Kiểm tra chứng từ:</strong> Kiểm tra số container, số seal, lệnh giao nhận (EIR) đã được thanh toán qua cổng thông tin E-port hay chưa.
-2. <strong>Kiểm tra ngoại quan:</strong> Ghi nhận tình trạng vỏ container (bị móp méo, rách vỏ, rỉ sét...) để phân định trách nhiệm hư hỏng giữa hãng tàu, lái xe và cảng.
-3. <strong>Phân làn và chỉ định vị trí:</strong> Chỉ định block và hàng cụ thể trên bãi để xe di chuyển vào hạ container hoặc nhận container lên xe.</p>
+<p>Khi xe đầu kéo chở container ra/vào cảng, quy trình tác nghiệp bao gồm:</p>
+<ol>
+<li><strong>Kiểm tra chứng từ:</strong> Kiểm tra số container, số seal, lệnh giao nhận (EIR) đã được thanh toán qua cổng thông tin E-port hay chưa.</li>
+<li><strong>Kiểm tra ngoại quan:</strong> Ghi nhận tình trạng vỏ container (bị móp méo, rách vỏ, rỉ sét...) để phân định trách nhiệm hư hỏng giữa hãng tàu, lái xe và cảng.</li>
+<li><strong>Phân làn và chỉ định vị trí:</strong> Chỉ định block và hàng cụ thể trên bãi để xe di chuyển vào hạ container hoặc nhận container lên xe.</li>
+</ol>
 <h4 id="2-vấn-đề-ùn-tắc-cổng-cảng-và-giải-pháp">2. Vấn đề ùn tắc cổng cảng và giải pháp</h4>
 <ul>
 <li><strong>Nguyên nhân:</strong> Lượng xe tải đổ dồn vào cảng vào các khung giờ cố định (ví dụ: chiều tối hoặc trước giờ đóng sổ tàu - closing time), kết hợp thời gian làm thủ tục tại bốt kiểm soát thủ công kéo dài.</li>
@@ -147,136 +156,24 @@ Nội dung tự học của <strong>Buổi số 9 (E-learning 3)</strong> sẽ g
 </ul>
 <hr />
 <h3 id="phần-5-quy-trình-thực-tế-tại-cảng-container-quốc-tế-sp-itc">PHẦN 5: QUY TRÌNH THỰC TẾ TẠI CẢNG CONTAINER QUỐC TẾ SP-ITC</h3>
-<p>Để giúp các em liên hệ lý thuyết với thực tế vận hành tại các cảng biển hiện đại ở Việt Nam, dưới đây là chi tiết các quy trình giao nhận container tại cổng (Gate) và quy trình đóng rút hàng tại kho CFS của <strong>Cảng Container Quốc tế SP-ITC</strong> (Quận 9, TP.HCM) – một trong những cảng container năng động áp dụng giải pháp cảng điện tử hiện đại.</p>
-<h4 id="1-quy-trình-giao-nhận-container-tại-cổng-cảng-sop-gate">1. Quy trình giao nhận container tại Cổng cảng (SOP Gate)</h4>
-<h5 id="a-quy-trình-nhận-container-từ-cảng-về-container-pick-up-process">a) Quy trình nhận container từ Cảng về (Container Pick-up Process)</h5>
-<p>Áp dụng cho khách hàng đến cảng nhận container hàng nhập khẩu hoặc nhận container rỗng về đóng hàng xuất khẩu. Quy trình gồm các bước:
-1. <strong>Làm thủ tục tại Thương vụ:</strong> Khách hàng/tài xế đỗ xe tại bãi chờ, đến phòng Thương vụ xuất trình Booking/Lệnh giao container, đóng phí dịch vụ, nhận hóa đơn VAT và Lệnh Giao nhận (EIO) (nếu chưa làm lệnh điện tử E-port).
-2. <strong>Kiểm tra tại bốt bảo vệ cổng vào:</strong> Tài xế xuất trình Bằng lái/CMND, trình lệnh EIO để nhân viên cổng khai báo số xe/rơ-moóc lên hệ thống. Tài xế nhận lại EIO, nhận Thẻ vào cổng, Phiếu vị trí bãi (LS) và tấm thẻ cẩu bãi (BAT).
-3. <strong>Tác nghiệp tại bãi container (CY):</strong> Tài xế lái xe vào đúng vị trí chỉ định trên Phiếu LS, trình thẻ BAT cho nhân viên lái cẩu bãi (RTG, Reach Stacker hoặc Empty Handler) để gắp container lên xe.
-4. <strong>Làm thủ tục tại cổng ra:</strong> Tài xế lái xe ra cổng, trả lại Thẻ vào cổng và BAT cho bảo vệ, nộp liên xanh của Lệnh giao nhận EIR, nhận lại Bằng lái/CMND và ký nhận Phiếu EIR (Liên Hồng).</p>
-<div class="mermaid">sequenceDiagram
-    autonumber
-    actor TX as Tài xế / Chủ hàng
-    participant TV as Phòng Thương vụ
-    participant C as Cổng Bảo vệ (Vào/Ra)
-    participant B as Bãi CY (Lái cẩu)
-
-    TX-&gt;&gt;TV: Trình lệnh giao cont/Booking &amp; đóng phí
-    TV--&gt;&gt;TX: Cấp hóa đơn VAT &amp; Lệnh giao nhận (EIO)
-    TX-&gt;&gt;C: Xuất trình Bằng lái &amp; lệnh EIO tại cổng vào
-    C--&gt;&gt;TX: Khai báo số xe, cấp Thẻ cổng, Phiếu vị trí (LS), thẻ BAT
-    TX-&gt;&gt;B: Di chuyển đến vị trí LS &amp; trình thẻ BAT cho lái cẩu
-    B--&gt;&gt;TX: Gắp cấp container lên xe đầu kéo
-    TX-&gt;&gt;C: Trả Thẻ cổng &amp; BAT; nộp EIR liên xanh tại cổng ra
-    C--&gt;&gt;TX: Trả lại Bằng lái, ký &amp; nhận Phiếu EIR (Liên Hồng)</div>
-<h5 id="b-quy-trình-hạ-container-vào-cảng-container-drop-off-process">b) Quy trình hạ container vào Cảng (Container Drop-off Process)</h5>
-<p>Áp dụng cho khách hàng mang container hàng xuất khẩu đến hạ tại cảng chờ xếp lên tàu hoặc trả container rỗng sau khi rút hàng. Quy trình gồm các bước:
-1. <strong>Chuẩn bị lệnh nâng hạ:</strong> Chủ hàng/tài xế trình Packing List hoặc Lệnh hạ rỗng tại phòng Thương vụ để đóng phí và nhận EIO (nếu chưa chuẩn bị lệnh trực tuyến).
-2. <strong>Kiểm tra và cân container:</strong> Tài xế trình EIO cho nhân viên kiểm cont để xác nhận tình trạng vỏ. Đối với container hàng xuất khẩu, xe bắt buộc di chuyển vào <strong>CỔNG SỐ 1</strong> để cân tải trọng (xác nhận VGM).
-3. <strong>Kiểm soát cổng vào:</strong> Tài xế trình lệnh EIO, xuất trình Bằng lái/CMND, nhận Thẻ vào cổng, Phiếu vị trí bãi (LS) và tấm thẻ cẩu bãi (BAT).
-4. <strong>Tác nghiệp hạ container tại bãi (CY):</strong> Tài xế lái xe đến vị trí trên phiếu LS, trình thẻ BAT cho lái cẩu bãi để hạ container xuống bãi.
-5. <strong>Kiểm soát cổng ra:</strong> Tài xế trả Thẻ cổng &amp; BAT, nhận lại Bằng lái, ký và nhận Phiếu EIR (Liên Hồng) xác nhận đã hạ container.</p>
-<div class="mermaid">sequenceDiagram
-    autonumber
-    actor TX as Tài xế / Chủ hàng
-    participant TV as Phòng Thương vụ / Cân cont
-    participant C as Cổng Bảo vệ (Vào/Ra)
-    participant B as Bãi CY (Lái cẩu)
-
-    TX-&gt;&gt;TV: Trình Packing List/Lệnh hạ rỗng &amp; đóng phí
-    TV--&gt;&gt;TX: Kiểm tra vỏ cont &amp; cân cont hàng (Cổng 1 lấy VGM)
-    TX-&gt;&gt;C: Trình lệnh EIO &amp; Bằng lái tại cổng vào
-    C--&gt;&gt;TX: Cấp Thẻ cổng, Phiếu vị trí (LS), thẻ BAT
-    TX-&gt;&gt;B: Di chuyển đến vị trí LS &amp; trình BAT cho lái cẩu
-    B--&gt;&gt;TX: Hạ container từ xe xuống bãi CY
-    TX-&gt;&gt;C: Trả Thẻ cổng &amp; BAT tại cổng ra
-    C--&gt;&gt;TX: Trả Bằng lái, ký &amp; nhận Phiếu EIR (Liên Hồng)</div>
-<h4 id="2-quy-trình-đóng-rút-hàng-tại-kho-cfs-sop-cfs">2. Quy trình đóng rút hàng tại kho CFS (SOP CFS)</h4>
-<p>Khu vực kho CFS và bãi FCL CFS là nơi thực hiện các tác nghiệp đóng gói hàng lẻ vào container (Stuffing) hoặc rút hàng từ container để giao nhận bằng xe tải (Unstuffing).</p>
-<h5 id="a-quy-trình-đóng-hàng-nguyên-container-fcl-stuffing-process">a) Quy trình đóng hàng nguyên container (FCL Stuffing Process)</h5>
-<ol>
-<li><strong>Lập lệnh đóng hàng tại Thương vụ:</strong> Chủ hàng trình Booking/Lệnh đóng hàng, đóng phí dịch vụ, nhận hóa đơn VAT và Lệnh Đóng rút (USO).</li>
-<li><strong>Lái xe đăng ký vào cổng:</strong> Tài xế xe tải chở hàng đến cổng xuất trình Bằng lái/CMND, nhận Thẻ vào cổng.</li>
-<li><strong>Đăng ký làm hàng tại Ban kho hàng (CFS Section):</strong> Chủ hàng/tài xế trình lệnh USO, đăng ký thời gian làm hàng và nhận Phiếu điều động nhân lực xếp dỡ.</li>
-<li><strong>Thực hiện đóng hàng tại bãi CFS:</strong> Nhân viên kho CFS phối hợp cùng chủ hàng đóng hàng từ xe tải vào container. Ghi nhận thời gian bắt đầu/kết thúc và tình trạng container lên lệnh USO.</li>
-<li><strong>Hoàn tất thủ tục và rời cảng:</strong>
-   - <strong>Tài xế:</strong> Trình phiếu USR (Phiếu đóng rút hàng), trả thẻ cổng để nhận lại Bằng lái/CMND.
-   - <strong>Chủ hàng:</strong> Trả lại lệnh USO có xác nhận của CFS hiện trường, nộp danh sách đóng gói hàng hóa (Packing List), ký nhận Phiếu USR (Liên Hồng).</li>
-</ol>
-<div class="mermaid">sequenceDiagram
-    autonumber
-    actor CH as Chủ hàng / Tài xế xe tải
-    participant TV as Phòng Thương vụ
-    participant C as Cổng Bảo vệ
-    participant KH as Ban Kho hàng CFS
-    participant B as Bãi đóng rút hàng CFS
-
-    CH-&gt;&gt;TV: Trình Booking/Lệnh đóng hàng &amp; đóng phí
-    TV--&gt;&gt;CH: Cấp Hóa đơn &amp; Lệnh Đóng rút (USO)
-    CH-&gt;&gt;C: Tài xế trình Bằng lái tại cổng vào
-    C--&gt;&gt;CH: Cấp Thẻ vào cổng cho xe tải
-    CH-&gt;&gt;KH: Trình USO &amp; Đăng ký thời gian làm hàng
-    KH--&gt;&gt;CH: Cấp Phiếu điều động nhân lực
-    CH-&gt;&gt;B: Đóng hàng từ xe tải vào container; xác nhận lên USO
-    CH-&gt;&gt;C: Tài xế trả Thẻ cổng, nhận lại Bằng lái tại cổng ra
-    CH-&gt;&gt;KH: Chủ hàng nộp USO xác nhận + Packing List
-    KH--&gt;&gt;CH: Ký &amp; nhận Phiếu đóng rút hàng USR (Liên Hồng)</div>
-<h5 id="b-quy-trình-rút-hàng-nguyên-container-fcl-unstuffing-process">b) Quy trình rút hàng nguyên container (FCL Unstuffing Process)</h5>
-<ol>
-<li><strong>Lập lệnh rút hàng tại Thương vụ:</strong> Chủ hàng xuất trình Lệnh giao container rút ruột (DO) hoặc Giấy giới thiệu, đóng phí dịch vụ, nhận Lệnh Đóng rút (USO).</li>
-<li><strong>Xe tải đăng ký vào cổng:</strong> Tài xế xe tải vào cổng xuất trình Bằng lái/CMND, nhận Thẻ vào cổng.</li>
-<li><strong>Đăng ký tại Ban kho hàng:</strong> Trình lệnh USO để đăng ký thời gian rút hàng và nhận Phiếu điều động nhân lực.</li>
-<li><strong>Thực hiện rút hàng tại bãi CFS:</strong> Tiến hành rút hàng từ container lên xe tải dưới sự giám sát của chủ hàng và CFS. Ghi nhận thời gian và tình trạng container rỗng sau rút hàng lên USO.</li>
-<li><strong>Hoàn tất thủ tục và rời cảng:</strong>
-   - <strong>Tài xế:</strong> Trình phiếu USR hoặc Phiếu giao hàng (nếu rút nhiều lần), trả thẻ cổng để nhận lại Bằng lái/CMND.
-   - <strong>Chủ hàng:</strong> Trả lệnh USO có xác nhận CFS hiện trường, ký nhận Phiếu USR (Liên Hồng) hoàn thành giao nhận hàng.</li>
-</ol>
-<div class="mermaid">sequenceDiagram
-    autonumber
-    actor CH as Chủ hàng / Tài xế xe tải
-    participant TV as Phòng Thương vụ
-    participant C as Cổng Bảo vệ
-    participant KH as Ban Kho hàng CFS
-    participant B as Bãi đóng rút hàng CFS
-
-    CH-&gt;&gt;TV: Trình lệnh DO/Giấy giới thiệu &amp; đóng phí
-    TV--&gt;&gt;CH: Cấp Hóa đơn &amp; Lệnh Đóng rút (USO)
-    CH-&gt;&gt;C: Tài xế trình Bằng lái tại cổng vào
-    C--&gt;&gt;CH: Cấp Thẻ vào cổng cho xe tải
-    CH-&gt;&gt;KH: Trình USO &amp; Đăng ký thời gian làm hàng
-    KH--&gt;&gt;CH: Cấp Phiếu điều động nhân lực
-    CH-&gt;&gt;B: Rút hàng từ container lên xe tải; xác nhận cont rỗng
-    CH-&gt;&gt;C: Tài xế trình USR/Phiếu giao hàng, trả Thẻ cổng, nhận Bằng lái
-    CH-&gt;&gt;KH: Chủ hàng trả USO xác nhận hiện trường
-    KH--&gt;&gt;CH: Ký &amp; nhận Phiếu đóng rút hàng USR (Liên Hồng)</div>
-<p><strong>2. QUY TRÌNH KHAI THÁC HÀNG QUÁ KHỔ TẠI CẢNG (OOG):</strong></p>
+<p>Để giúp các em liên hệ lý thuyết với thực tế vận hành tại các cảng biển hiện đại ở Việt Nam, dưới đây là chi tiết các quy trình giao nhận container tại cổng (Gate) và quy trình đóng rút hàng tại kho CFS của <strong>Cảng Container Quốc tế SP-ITC</strong> (TP.HCM) – một trong những cảng container năng động áp dụng giải pháp cảng điện tử hiện đại.</p>
+<p><strong>1. QUY TRÌNH GIAO NHẬN CONTAINER TẠI CẢNG:</strong></p>
 <ul>
-<li>Tiê'ng Việt: <a href="https://sp-itc.com.vn/userfiles/files/32.SP-ITC%20-%20PLC002%20OOG%20Operations%20Policy%20%28VN%29.pdf">Xem tại đây</a></li>
+<li><strong>Cổng:</strong>* <a href="https://sp-itc.com.vn/userfiles/files/SOP/SOP%20Gate.pdf">Xem tại đây</a>*</li>
+<li><strong>Sà lan:</strong> <em><a href="https://sp-itc.com.vn/userfiles/files/SOP/SOP%20Barge.pdf">Xem tai đây</a></em></li>
+<li><strong>Đóng rút hàng:</strong> <em><a href="https://sp-itc.com.vn/userfiles/files/SOP/SOP%20CFS.pdf">Xem tại đây</a></em></li>
+</ul>
+<p>**2. QUY TRÌNH KHAI THÁC HÀNG QUÁ KHỔ TẠI CẢNG (OOG): **</p>
+<ul>
+<li><strong>English: *</strong><a href="https://sp-itc.com.vn/userfiles/files/33.SP-ITC%20-%20PLC002%20OOG%20Operations%20Policy%20%28Eng%29.pdf">View Here</a>*</li>
+<li><strong>Tiê'ng Việt: *</strong><a href="https://sp-itc.com.vn/userfiles/files/32.SP-ITC%20-%20PLC002%20OOG%20Operations%20Policy%20%28VN%29.pdf">Xem tại đây</a>*</li>
 </ul>
 <p><strong>3. QUY TRÌNH KHAI THÁC HÀNG NGUY HIỂM TẠI CẢNG (DG):</strong></p>
 <ul>
 <li><strong>English:</strong> <em><a href="https://sp-itc.com.vn/userfiles/files/SPITC/2025%20-%20REGULATIONS%20ON%20EXPOITATION%20DG%20AT%20SP-ITC.pdf">View Here</a></em></li>
 <li><strong>Tiê'ng Việt:</strong> <em><a href="https://sp-itc.com.vn/userfiles/files/SPITC/2025%20-%20Quy%20%C4%91%E1%BB%8Bnh%20l%C3%A0m%20h%C3%A0ng%20nguy%20hi%E1%BB%83m%20t%E1%BA%A1i%20C%E1%BA%A3ng%20SP-ITC.pdf">Xem tại đây</a></em></li>
 </ul>
-<p><strong>4. QUY TRÌNH GIAO HÀNG NHẬP THEO SÔ' VẬN ĐƠN (Bill of Lading):</strong> <em><a href="https://sp-itc.com.vn/userfiles/files/SOP/WI-CUS-01%20Import%20Delivery%20by%20Bill%20of%20Lading%20(VN).pdf">Xem tại đây</a></em></p>
-<hr />
-<h3 id="câu-hỏi-tự-luyện">CÂU HỎI TỰ LUYỆN</h3>
-<ol>
-<li>Tại sao nói hệ số sử dụng dung lượng bãi (\(\eta_{use}\)) chỉ nên khống chế ở mức 70% - 80%? Điều gì xảy ra nếu bãi chứa bị đầy 95%?</li>
-<li>Hãy so sánh sự khác nhau về mặt kinh tế và vận hành giữa việc sử dụng cẩu RTG và xe nâng Reach Stacker tại bãi cảng.</li>
-</ol>
-<hr />
-<h3 id="tài-liệu-tham-khảo">TÀI LIỆU THAM KHẢO</h3>
-<ol>
-<li>Notteboom, T., Pallis, A. A., &amp; Rodrigue, J.-P. (2026). Port Economics, Management and Policy. Routledge.</li>
-<li>Tài liệu đào tạo nội bộ về Khai thác bãi container - Tổng công ty Tân Cảng Sài Gòn.</li>
-</ol>
-<hr />
-<h3 id="tài-liệu-đọc-thêm-thực-tế-references">TÀI LIỆU ĐỌC THÊM THỰC TẾ (REFERENCES)</h3>
-<p>Các tài liệu thực tiễn dưới đây nằm trong thư mục  để phục vụ đối chiếu thực tiễn:
-* <strong>Quyết định 442/QĐ-TTg năm 2024 về Điều chỉnh Quy hoạch Cảng biển Việt Nam</strong>
-* <strong>Báo cáo dự án Cảng trung chuyển quốc tế Cần Giờ</strong></p></main>
+<p><strong>4. QUY TRÌNH GIAO HÀNG NHẬP THEO SÔ' VẬN ĐƠN (Bill of Lading):</strong> <em><a href="https://sp-itc.com.vn/userfiles/files/SOP/WI-CUS-01%20Import%20Delivery%20by%20Bill%20of%20Lading%20(VN).pdf">Xem tại đây</a></em></p></main>
 <footer class="pagefoot">
   <p>Quản lý và Khai thác Ga, Cảng (Mã 418009) &mdash; Giảng viên biên soạn: ThS. Nguyễn Tuấn Hiệp</p>
   <p>Trường Đại học Giao thông Vận tải TP.HCM (UTH) &middot; Tài liệu tự học E-learning</p>
