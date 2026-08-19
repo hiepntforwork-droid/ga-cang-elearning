@@ -76,13 +76,13 @@ Trong đó:
 
 Việc lựa chọn thiết bị bãi ảnh hưởng trực tiếp đến mật độ xếp chồng (chiều cao $h_c$) và diện tích phụ trợ ($F_{sub}$). Ba loại thiết bị bãi phổ biến nhất gồm:
 
-| Chỉ tiêu so sánh | Cẩu giàn bãi chạy ray (RMG) | Cẩu giàn bãi chạy bánh lốp (RTG) | Xe nâng container (Reach Stacker) |
-|---|---|---|---|
-| **Chiều cao xếp chồng** | 5 - 6 tầng container | 3 - 4 tầng container | 3 - 5 tầng container |
-| **Độ rộng block xếp** | 12 - 14 hàng ngang | 6 - 8 hàng ngang | Chỉ với tới hàng thứ 1 hoặc 2 |
-| **Tính linh hoạt** | Rất thấp (chạy trên ray cố định) | Trung bình (có thể chuyển block chậm) | Rất cao (chạy tự do trên bãi) |
-| **Mức độ tự động hóa** | Rất cao | Trung bình | Thấp |
-| **Chi phí đầu tư** | Rất cao | Cao | Thấp |
+| Chỉ tiêu so sánh                 | Cẩu giàn bãi chạy ray (RMG)         | Cẩu giàn bãi chạy bánh lốp (RTG)     | Xe nâng container (Reach Stacker)  |
+| ----------------------------------- | --------------------------------------- | ------------------------------------------ | ----------------------------------- |
+| **Chiều cao xếp chồng**    | 5 - 6 tầng container                   | 3 - 4 tầng container                      | 3 - 5 tầng container               |
+| **Độ rộng block xếp**     | 12 - 14 hàng ngang                     | 6 - 8 hàng ngang                          | Chỉ với tới hàng thứ 1 hoặc 2 |
+| **Tính linh hoạt**          | Rất thấp (chạy trên ray cố định) | Trung bình (có thể chuyển block chậm) | Rất cao (chạy tự do trên bãi)  |
+| **Mức độ tự động hóa** | Rất cao                                | Trung bình                                | Thấp                               |
+| **Chi phí đầu tư**        | Rất cao                                | Cao                                        | Thấp                               |
 
 * **Lưu ý tác nghiệp:** Cẩu RMG phù hợp với cảng biển quy mô lớn cần mật độ chứa rất cao và tự động hóa; cẩu RTG là phổ biến nhất ở Việt Nam (như cảng Cát Lái, Cái Mép); xe nâng Reach Stacker phù hợp với cảng sông, cảng nhỏ hoặc bãi ICD vệ tinh.
 

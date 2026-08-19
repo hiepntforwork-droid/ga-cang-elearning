@@ -20,7 +20,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(HERE, "src")
 OUT_DIR = HERE
 # Thư mục .md gốc (nằm cạnh repo, trong thư mục môn học)
-ORIG_DIR = os.path.abspath(os.path.join(HERE, "..", "Tài liệu tự học E-learning"))
+ORIG_DIR = os.path.abspath(os.path.join(HERE, ".."))
+if not os.path.isfile(os.path.join(ORIG_DIR, "Buoi 3 - Tai lieu tu hoc E-learning.md")):
+    ORIG_DIR = os.path.abspath(os.path.join(HERE, "..", "Tài liệu tự học E-learning"))
 
 LESSONS = [
     (3,  "Buoi 3 - Tai lieu tu hoc E-learning.md",  "buoi-03.html"),
