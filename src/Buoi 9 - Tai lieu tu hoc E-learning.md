@@ -234,7 +234,8 @@ sequenceDiagram
 
 **3. QUY TRÌNH KHAI THÁC HÀNG NGUY HIỂM TẠI CẢNG (DG):**
 
-* **Tiê'ng Việt:***[Xem tại đây](https://sp-itc.com.vn/userfiles/files/SPITC/2025%20-%20Quy%20%C4%91%E1%BB%8Bnh%20l%C3%A0m%20h%C3%A0ng%20nguy%20hi%E1%BB%83m%20t%E1%BA%A1i%20C%E1%BA%A3ng%20SP-ITC.pdf)*
+* **English:** *[View Here](https://sp-itc.com.vn/userfiles/files/SPITC/2025%20-%20REGULATIONS%20ON%20EXPOITATION%20DG%20AT%20SP-ITC.pdf)*
+* **Tiê'ng Việt:** *[Xem tại đây](https://sp-itc.com.vn/userfiles/files/SPITC/2025%20-%20Quy%20%C4%91%E1%BB%8Bnh%20l%C3%A0m%20h%C3%A0ng%20nguy%20hi%E1%BB%83m%20t%E1%BA%A1i%20C%E1%BA%A3ng%20SP-ITC.pdf)*
 
 **4. QUY TRÌNH GIAO HÀNG NHẬP THEO SÔ' VẬN ĐƠN (Bill of Lading):** *[Xem tại đây](https://sp-itc.com.vn/userfiles/files/SOP/WI-CUS-01%20Import%20Delivery%20by%20Bill%20of%20Lading%20(VN).pdf)*
 
