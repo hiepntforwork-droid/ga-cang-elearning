@@ -76,13 +76,13 @@ Trong đó:
 
 Việc lựa chọn thiết bị bãi ảnh hưởng trực tiếp đến mật độ xếp chồng (chiều cao $h_c$) và diện tích phụ trợ ($F_{sub}$). Ba loại thiết bị bãi phổ biến nhất gồm:
 
-| Chỉ tiêu so sánh                 | Cẩu giàn bãi chạy ray (RMG)         | Cẩu giàn bãi chạy bánh lốp (RTG)     | Xe nâng container (Reach Stacker)  |
-| ----------------------------------- | --------------------------------------- | ------------------------------------------ | ----------------------------------- |
-| **Chiều cao xếp chồng**    | 5 - 6 tầng container                   | 3 - 4 tầng container                      | 3 - 5 tầng container               |
-| **Độ rộng block xếp**     | 12 - 14 hàng ngang                     | 6 - 8 hàng ngang                          | Chỉ với tới hàng thứ 1 hoặc 2 |
-| **Tính linh hoạt**          | Rất thấp (chạy trên ray cố định) | Trung bình (có thể chuyển block chậm) | Rất cao (chạy tự do trên bãi)  |
-| **Mức độ tự động hóa** | Rất cao                                | Trung bình                                | Thấp                               |
-| **Chi phí đầu tư**        | Rất cao                                | Cao                                        | Thấp                               |
+| Chỉ tiêu so sánh | Cẩu giàn bãi chạy ray (RMG) | Cẩu giàn bãi chạy bánh lốp (RTG) | Xe nâng container (Reach Stacker) |
+|---|---|---|---|
+| **Chiều cao xếp chồng** | 5 - 6 tầng container | 3 - 4 tầng container | 3 - 5 tầng container |
+| **Độ rộng block xếp** | 12 - 14 hàng ngang | 6 - 8 hàng ngang | Chỉ với tới hàng thứ 1 hoặc 2 |
+| **Tính linh hoạt** | Rất thấp (chạy trên ray cố định) | Trung bình (có thể chuyển block chậm) | Rất cao (chạy tự do trên bãi) |
+| **Mức độ tự động hóa** | Rất cao | Trung bình | Thấp |
+| **Chi phí đầu tư** | Rất cao | Cao | Thấp |
 
 * **Lưu ý tác nghiệp:** Cẩu RMG phù hợp với cảng biển quy mô lớn cần mật độ chứa rất cao và tự động hóa; cẩu RTG là phổ biến nhất ở Việt Nam (như cảng Cát Lái, Cái Mép); xe nâng Reach Stacker phù hợp với cảng sông, cảng nhỏ hoặc bãi ICD vệ tinh.
 
@@ -226,6 +226,17 @@ sequenceDiagram
     CH->>KH: Chủ hàng trả USO xác nhận hiện trường
     KH-->>CH: Ký & nhận Phiếu đóng rút hàng USR (Liên Hồng)
 ```
+
+
+**2. QUY TRÌNH KHAI THÁC HÀNG QUÁ KHỔ TẠI CẢNG (OOG):**
+
+* Tiê'ng Việt: [Xem tại đây](https://sp-itc.com.vn/userfiles/files/32.SP-ITC%20-%20PLC002%20OOG%20Operations%20Policy%20%28VN%29.pdf)
+
+**3. QUY TRÌNH KHAI THÁC HÀNG NGUY HIỂM TẠI CẢNG (DG):**
+
+* **Tiê'ng Việt:***[Xem tại đây](https://sp-itc.com.vn/userfiles/files/SPITC/2025%20-%20Quy%20%C4%91%E1%BB%8Bnh%20l%C3%A0m%20h%C3%A0ng%20nguy%20hi%E1%BB%83m%20t%E1%BA%A1i%20C%E1%BA%A3ng%20SP-ITC.pdf)*
+
+**4. QUY TRÌNH GIAO HÀNG NHẬP THEO SÔ' VẬN ĐƠN (Bill of Lading):** *[Xem tại đây](https://sp-itc.com.vn/userfiles/files/SOP/WI-CUS-01%20Import%20Delivery%20by%20Bill%20of%20Lading%20(VN).pdf)*
 
 ---
 
